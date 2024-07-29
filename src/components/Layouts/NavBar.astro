@@ -1,0 +1,122 @@
+---
+// Astro components
+import { Image } from 'astro:assets';
+
+// Assets Resources
+import AmadeusLogo from '@assets/amadeus-logo/amadeus_logo.png';
+import ArrowDown from '@assets/icons/arrow_down.svg';
+// Hamburger mobile desing
+import Hamburger from '@assets/navbar-icons/hamburger.svg';
+import Cross from '@assets/navbar-icons/cross.svg';
+
+// Buttons
+import PrimaryButton from '@components/buttons/PrimaryButton.astro';
+import SecondaryButton from '@components/buttons/SecondaryButton.astro';
+
+// Styles
+import './NavBar.scss';
+---
+
+<nav class="navigation">
+  <div class="auxiliar-nav">
+    <img
+      src={AmadeusLogo.src}
+      alt="Amadeus Logo"
+      width="124px"
+      class="navigation-left__image"
+    />
+
+    <button class="navigation__hamburguer" id="hamburger_button">
+      <Image
+        src={Hamburger}
+        alt="Flecha desplegable"
+        height={25}
+        id="hamburger"
+        class="no-display"
+      />
+      <Image src={Cross} alt="Flecha desplegable" height={25} class="" id="cross" />
+    </button>
+  </div>
+
+  <div class="links-container animate__animated" id="links-container">
+    <div class="navigation-left">
+      <ul class="navigation-left__links">
+        <li class="navigation-left__link">
+          <a href="/">
+            <span> Inicio </span>
+            <Image src={ArrowDown} alt="Flecha desplegable" />
+          </a>
+        </li>
+
+        <li class="navigation-left__link">
+          <a href="/popular-destination">
+            <span> Destinos populares </span>
+            <Image src={ArrowDown} alt="Flecha desplegable" />
+          </a>
+        </li>
+
+        <li class="navigation-left__link">
+          <a href="/quizz">
+            <span> Busca tu destino </span>
+
+            <Image src={ArrowDown} alt="Flecha desplegable" />
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="navigation-right">
+      <PrimaryButton link="/login"> Login </PrimaryButton>
+      <SecondaryButton text="Sign up" link="/signup"> Quizz </SecondaryButton>
+    </div>
+  </div>
+</nav>
+
+<script>
+  const temp = 'animate__fadeInLeft';
+
+  const hamburgerButton = document.getElementById('hamburger_button');
+  hamburgerButton?.setAttribute('open', '');
+
+  function hamburgerMenu() {
+    const hamburgerIcon = document.getElementById('hamburger') as HTMLImageElement;
+    const crossIcon = document.getElementById('cross') as HTMLImageElement;
+    const linksContenedor = document.getElementById('links-container');
+
+    const isOpen = hamburgerButton?.hasAttribute('open');
+
+    // Se detecta si la hamburguesa esta visible o no, de ser asi se muestra la cruz y se oculta la hamburguesa
+    if (isOpen) {
+      crossIcon.classList.add('no-display');
+      hamburgerIcon.classList.remove('no-display');
+
+      if (linksContenedor) {
+        // Quitar la clase de entrada y poner la de salida
+        linksContenedor.classList.remove('animate__fadeInLeft');
+        linksContenedor.classList.add('animate__fadeOutLeft');
+        setTimeout(() => {
+          linksContenedor.style.display = 'none';
+        }, 1000);
+      }
+
+      hamburgerButton?.removeAttribute('open');
+    } else {
+      hamburgerIcon.classList.add('no-display');
+      crossIcon.classList.remove('no-display');
+
+      if (linksContenedor) {
+        linksContenedor.classList.remove('animate__fadeOutLeft');
+        linksContenedor.classList.add('animate__fadeInLeft');
+        // Añadir animacion de entrada
+
+        linksContenedor.style.display = 'flex';
+      }
+
+      hamburgerButton?.setAttribute('open', '');
+    }
+  }
+
+  hamburgerButton?.addEventListener('click', () => {
+    hamburgerMenu();
+  });
+</script>
