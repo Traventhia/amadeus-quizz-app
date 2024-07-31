@@ -1,0 +1,70 @@
+// Card Information 
+
+.carrousel__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6);
+}
+
+.content {
+    position: absolute;
+    top: 15%;
+    max-width: 50%;
+    left: 20%;
+    padding-right: 10%;
+    box-sizing: border-box;
+    color: white;
+    text-shadow: 0 5px 10px #0004;
+
+    & .place {
+        font-size: 2rem;
+        letter-spacing: 5px;
+        font-weight: 800;
+    }
+
+    & .location, .climate {
+        font-weight: 900;
+        font-size: 3rem;
+    }
+
+    & .description {
+        font-size: 2rem;
+    }
+
+    .location {
+        color: $secondary-blue;
+    }
+
+    .buttons {
+        margin: 30px 0 0;
+        display: grid;
+        grid-template-columns: repeat(2, 250px);
+        grid-template-rows: 40px;
+        gap: 8px;
+        cursor: pointer;
+
+        & button {
+            letter-spacing: 3px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        & button:nth-child(1) {
+            background-color: transparent;
+            color: white;
+            border: 2px solid #ffffff;
+            border-radius: 8px;
+            transition: background-color 0.5s ease;
+
+            &:hover {
+                background-color: #ffffff;
+                color: rgba(0, 0, 0, 0.672);
+            }
+        }
+    }
+}
+
+
+

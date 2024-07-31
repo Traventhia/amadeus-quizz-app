@@ -1,0 +1,18 @@
+---
+import './Card.scss';
+
+interface Props {
+    title: string;
+    src: string;
+    description: string;
+    alt: string;
+}
+
+const { title, src, description, alt } = Astro.props;
+---
+
+<img class="card__image" src={src} alt={alt} />
+<div class="card__text">
+    <div class="item__title">{title}</div>
+    <p class="item__description">{description}</p>
+</div>

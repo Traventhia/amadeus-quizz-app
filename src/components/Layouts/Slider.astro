@@ -1,0 +1,257 @@
+---
+// Images
+import Cable from '@assets/images/destinos/cable-car-8357177_1280.webp';
+import Camogli from '@assets/images/destinos/camogli-4324509_1280.jpg';
+import Cathedral from '@assets/images/destinos/cathedral-6830526_1280.jpg';
+import Galata from '@assets/images/destinos/galata-4043037_1280.jpg';
+import Hallstatt from '@assets/images/destinos/hallstatt-3609863_1280.jpg';
+import Istanbul from '@assets/images/destinos/istanbul-915076_1280.jpg';
+import Jordan from '@assets/images/destinos/jordan-1846284_1280.jpg';
+import Town from '@assets/images/destinos/town-7015699_960_720.jpg';
+
+// Styles
+import './Slider.scss';
+
+// Cards
+import Card from '@components/card/Card.astro';
+import CardInformation from '@components/cardInformation/CardInformation.astro';
+import ArrowLeft from '@components/buttons/ArrowLeft.astro';
+import ArrowRight from '@components/buttons/ArrowRight.astro';
+---
+
+<!-- Contain Carrousel -->
+<div class="containt__carrousel">
+    <!-- Carrousel -->
+    <div class="carrousel">
+        <!-- list -->
+        <div class="list__items">
+            <!-- Items -->
+            <div class="item">
+                <CardInformation
+                    src={Cable.src}
+                    alt="Imagen del Destino"
+                    place="Nommbre del destino"
+                    location="Locacion del destino"
+                    climate="Clima del destino"
+                    description="Lorem Lorem ipsum dolor sit amet consectetur, adipisicing eli Perspiciatis eos quos velit illum quae nihil ipsa omnis vel voluptas error sequi numquam, alias mollitia asperiores tempore provident vitae doloremque eius."
+                    href='#'
+                />
+            </div>
+
+            <div class="item">
+                <CardInformation
+                    src={Camogli.src}
+                    alt="Imagen del Destino"
+                    place="Nommbre del destino"
+                    location="Locacion del destino"
+                    climate="Clima del destino"
+                    description="Lorem Lorem ipsum dolor sit amet consectetur, adipisicing eli Perspiciatis eos quos velit illum quae nihil ipsa omnis vel voluptas error sequi numquam, alias mollitia asperiores tempore provident vitae doloremque eius."
+                    href='#'
+                />
+            </div>
+
+            <div class="item">
+                <CardInformation
+                    src={Cathedral.src}
+                    alt="Imagen del Destino"
+                    place="Nommbre del destino"
+                    location="Locacion del destino"
+                    climate="Clima del destino"
+                    description="Lorem Lorem ipsum dolor sit amet consectetur, adipisicing eli Perspiciatis eos quos velit illum quae nihil ipsa omnis vel voluptas error sequi numquam, alias mollitia asperiores tempore provident vitae doloremque eius."
+                    href='#'
+                />
+            </div>
+
+            <div class="item">
+                <CardInformation
+                    src={Galata.src}
+                    alt="Imagen del Destino"
+                    place="Nommbre del destino"
+                    location="Locacion del destino"
+                    climate="Clima del destino"
+                    description="Lorem Lorem ipsum dolor sit amet consectetur, adipisicing eli Perspiciatis eos quos velit illum quae nihil ipsa omnis vel voluptas error sequi numquam, alias mollitia asperiores tempore provident vitae doloremque eius."
+                    href='#'
+                />
+            </div>
+
+            <div class="item">
+                <CardInformation
+                    src={Hallstatt.src}
+                    alt="Imagen del Destino"
+                    place="Nommbre del destino"
+                    location="Locacion del destino"
+                    climate="Clima del destino"
+                    description="Lorem Lorem ipsum dolor sit amet consectetur, adipisicing eli Perspiciatis eos quos velit illum quae nihil ipsa omnis vel voluptas error sequi numquam, alias mollitia asperiores tempore provident vitae doloremque eius."
+                    href='#'
+                />
+            </div>
+
+            <div class="item">
+                <CardInformation
+                    src={Istanbul.src}
+                    alt="Imagen del Destino"
+                    place="Nommbre del destino"
+                    location="Locacion del destino"
+                    climate="Clima del destino"
+                    description="Lorem Lorem ipsum dolor sit amet consectetur, adipisicing eli Perspiciatis eos quos velit illum quae nihil ipsa omnis vel voluptas error sequi numquam, alias mollitia asperiores tempore provident vitae doloremque eius."
+                    href='#'
+                />
+            </div>
+
+            <div class="item">
+                <CardInformation
+                    src={Jordan.src}
+                    alt="Imagen del Destino"
+                    place="Nommbre del destino"
+                    location="Locacion del destino"
+                    climate="Clima del destino"
+                    description="Lorem Lorem ipsum dolor sit amet consectetur, adipisicing eli Perspiciatis eos quos velit illum quae nihil ipsa omnis vel voluptas error sequi numquam, alias mollitia asperiores tempore provident vitae doloremque eius."
+                    href='#'
+                />
+            </div>
+
+            <div class="item">
+                <CardInformation
+                    src={Town.src}
+                    alt="Imagen del Destino"
+                    place="Nommbre del destino"
+                    location="Locacion del destino"
+                    climate="Clima del destino"
+                    description="Lorem Lorem ipsum dolor sit amet consectetur, adipisicing eli Perspiciatis eos quos velit illum quae nihil ipsa omnis vel voluptas error sequi numquam, alias mollitia asperiores tempore provident vitae doloremque eius."
+                    href='#'
+                />
+            </div>
+        </div>
+
+        <!-- Thumbnail -->
+        <div class="thumbnail">
+            <div class="card__content">
+                <Card 
+                    src={Cable.src}
+                    alt='Imagen del destino turistico'
+                    title='Nombre del Lugar'
+                    description='Puede variar'
+                />
+            </div>
+
+            <div class="card__content">
+                <Card 
+                    src={Camogli.src}
+                    alt='Imagen del destino turistico'
+                    title='Nombre del Lugar'
+                    description='Puede variar'
+                />
+            </div>
+
+            <div class="card__content">
+                <Card 
+                    src={Cathedral.src}
+                    alt='Imagen del destino turistico'
+                    title='Nombre del Lugar'
+                    description='Puede variar'
+                />
+            </div>
+
+            <div class="card__content">
+                <Card 
+                    src={Galata.src}
+                    alt='Imagen del destino turistico'
+                    title='Nombre del Lugar'
+                    description='Puede variar'
+                />
+            </div>
+
+            <div class="card__content">
+                <Card 
+                    src={Hallstatt.src}
+                    alt='Imagen del destino turistico'
+                    title='Nombre del Lugar'
+                    description='Puede variar'
+                />
+            </div>
+
+            <div class="card__content">
+                <Card 
+                    src={Istanbul.src}
+                    alt='Imagen del destino turistico'
+                    title='Nombre del Lugar'
+                    description='Puede variar'
+                />
+            </div>
+
+            <div class="card__content">
+                <Card 
+                    src={Jordan.src}
+                    alt='Imagen del destino turistico'
+                    title='Nombre del Lugar'
+                    description='Puede variar'
+                />
+            </div>
+
+            <div class="card__content">
+                <Card 
+                    src={Town.src}
+                    alt='Imagen del destino turistico'
+                    title='Nombre del Lugar'
+                    description='Puede variar'
+                />
+            </div>
+        </div>
+
+        <!-- Arrows -->
+        <div class="arrows">
+            <ArrowLeft direction={'prev'} />
+            <ArrowRight direction={'next'} />
+        </div>
+        <div class="time"></div>
+    </div>
+</div>
+
+<script>
+// Variables DOM
+const nextDom = document.getElementById("next") as HTMLButtonElement;
+const prevDom = document.getElementById("prev") as HTMLButtonElement;
+const carrouselDom = document.querySelector(".carrousel") as HTMLElement;
+const listItemDom = document.querySelector(".carrousel .list__items") as HTMLElement;
+const thumbnailDom = document.querySelector(".carrousel .thumbnail") as HTMLElement;
+
+// Tipos de datos para el timeout
+let runTimeOut: number | undefined;
+let runAutoRun: number | undefined;
+
+// Intervalos de tiempo
+const timeRunning: number = 3000;
+const timeAutoNext: number = 9000;
+
+// Función para mostrar el slider
+function showSlider(type: 'next' | 'prev'): void {
+    const itemSlider = document.querySelectorAll(".carrousel .list__items .item") as NodeListOf<HTMLElement>;
+    const itemThumbnail = document.querySelectorAll(".carrousel .thumbnail .card__content") as NodeListOf<HTMLElement>;
+
+    if (type === "next") {
+        listItemDom.appendChild(itemSlider[0]);
+        thumbnailDom.appendChild(itemThumbnail[0]);
+        carrouselDom.classList.add("next");
+    } else {
+        const positionLastItem = itemSlider.length - 1;
+        listItemDom.prepend(itemSlider[positionLastItem]);
+        thumbnailDom.prepend(itemThumbnail[positionLastItem]);
+        carrouselDom.classList.add('prev');
+    }
+
+    clearTimeout(runTimeOut);
+    runTimeOut = window.setTimeout(() => {
+        carrouselDom.classList.remove('next');
+        carrouselDom.classList.remove('prev');
+    }, timeRunning);
+
+    clearTimeout(runAutoRun);
+    runAutoRun = window.setTimeout(() => {
+        nextDom.click();
+    }, timeAutoNext);
+}
+
+// Eventos para los botones
+nextDom.onclick = () => showSlider('next');
+prevDom.onclick = () => showSlider('prev');
+</script>
