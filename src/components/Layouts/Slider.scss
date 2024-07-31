@@ -4,11 +4,12 @@
 // Carrousel
 
 .containt__carrousel {
-    width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Source Sans Pro', sans-serif;
+
 
     .carrousel {
         width: 100%;
@@ -77,18 +78,28 @@
 
     .thumbnail {
         position: absolute;
-        bottom: 70px;
+        bottom: 100px;
         left: 60%;
         width: max-content;
         display: flex;
-        gap: 20px;
+        gap: 40px;
         z-index: 100;
 
         .card__content {
             width: 190px;
             height: 260px;
             border-radius: 20px;
-            position: relative;
+            position: relative;    
+            box-shadow: 0px 6px 17px 3px rgba(96, 91, 91, 0.694);
+            transition: scale 0.3s ease;
+            cursor: pointer;
+
+            &:hover {
+                scale: 1.1;
+                box-shadow: 0px 6px 17px 3px rgb(96, 91, 91);
+            }
+
+
         }
     }
 
@@ -151,6 +162,7 @@
     }
 
     .carrousel.prev .list__items .item:nth-child(2) .carrousel__image {
+        
         position: absolute;
         left: 0;
         bottom: 0;
@@ -217,4 +229,10 @@
             transform: scaleX(0);
         }
     }
+}
+
+.description {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 100 !important;
+  font-size: 26px !important;
 }
