@@ -4,6 +4,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    filter: brightness(0.6);
 }
 
 .content {
@@ -53,7 +54,14 @@
         & button:nth-child(1) {
             background-color: transparent;
             color: white;
-            border: 1px solid #ffffff;
+            border: 2px solid #ffffff;
+            border-radius: 8px;
+            transition: background-color 0.5s ease;
+
+            &:hover {
+                background-color: #ffffff;
+                color: rgba(0, 0, 0, 0.672);
+            }
         }
     }
 }
