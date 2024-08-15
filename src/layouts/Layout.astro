@@ -5,6 +5,7 @@ interface LayoutProps {
 
 const { title } = Astro.props;
 
+import Bienvenida from '@components/bienvenida/Bienvenida.astro';
 import NavBar from '@components/Layouts/NavBar.astro';
 import Slider from '@components/Layouts/Slider.astro';
 ---
@@ -19,5 +20,6 @@ import Slider from '@components/Layouts/Slider.astro';
   <body>
     <NavBar />
     <Slider />
+    <Bienvenida />
   </body>
 </html>
