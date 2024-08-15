@@ -6,13 +6,16 @@ interface Props {
     src: string;
     description: string;
     alt: string;
+    style: string;
 }
 
-const { title, src, description, alt } = Astro.props;
+const { title, src, description, alt, style } = Astro.props;
 ---
 
-<img class="card__image" src={src} alt={alt} />
-<div class="card__text">
-    <div class="item__title">{title}</div>
-    <p class="item__description">{description}</p>
+<div class="card__container" style={style}>
+    <img class="card__image" src={src} alt={alt} />
+    <div class="card__text">
+        <div class="item__title">{title}</div>
+        <p class="item__description">{description}</p>
+    </div>
 </div>

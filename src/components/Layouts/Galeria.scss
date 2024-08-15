@@ -1,4 +1,5 @@
 @import '../../styles/globales';
+@import '../card/Card.scss';
 
 // .container {
 //     width: 100vw;
@@ -144,8 +145,6 @@
 
     & .container__sections {
         display: flex;
-        flex-direction: row;
-        justify-content: center;
         justify-content: space-evenly;
     }
 
@@ -155,15 +154,19 @@
         height: 75vh;
         background-color: transparent;
         border: 2px solid #17c3b2;
-    
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        gap: 10px;
+        overflow-y: auto; // Habilita el scroll vertical
+
         & .container__images {
-            margin: 10px 10px;
-            width: 10vw;
-            height: 10vh;
-            background-color: blue;
+            display: contents;
 
-            & .images {
-
+            & .card__image {
+                border-radius: 4px;
+                overflow: hidden;
+                position: relative;
             }
         }
     }
