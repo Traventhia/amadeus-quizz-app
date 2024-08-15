@@ -1,0 +1,56 @@
+---
+// Styles
+import CardImages from '@components/card/CardImages.astro';
+import './Galeria.scss';
+
+// Images for the Cards
+const imagesData = [
+    { src: '/src/assets/images/destinos/cable-car-8357177_1280.webp', alt: 'Playa' },
+    // { src: '/src/assets/images/destinos/camogli-4324509_1280.jpg', alt: 'Bosque' },
+    // { src: '/src/assets/images/destinos/cathedral-6830526_1280.jpg', alt: 'Ciudad' },
+    // { src: '/src/assets/images/destinos/galata-4043037_1280.jpg', alt: 'Montaña' }
+];
+---
+
+<div class="contain__galeria">
+    <div class="containt__text">
+        <div class="title">
+            <h1>Galeria Amadus</h1>
+        </div>
+        <div class="subtitle">
+            <h3>Nuestros clientes también comparten su alegria con nosotros</h3>
+        </div>
+    </div>
+
+
+    <div class="container__sections">
+        <section class="contain__filters">
+            <div class="contain__title">
+                <h2>Filtros</h2>
+            </div>
+    
+            <div class="container__buttons">
+                <button> <span>Playa</span> </button>
+    
+                <button> <span>Bosque</span> </button>
+    
+                <button> <span>Ciudad</span> </button>
+    
+                <button> <span>Montaña</span> </button>
+            </div>
+        </section>
+    
+        <section class="galeria">
+            <div class="container__images">
+                <h2>Esta mos readdy</h2>
+                <div class="images">
+                    
+                </div>
+
+                </div>
+                
+            </div>
+        </section>
+    </div>
+</div>
+
