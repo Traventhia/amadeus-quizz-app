@@ -1,0 +1,267 @@
+---
+import '../juego/Quizz.scss';
+---
+
+<html>
+  <body>
+    <canvas id="gameCanvas"></canvas>
+    <div id="questionModal" class="modal hidden">
+      <div class="modal-content">
+        <p id="questionText"></p>
+        <div id="optionsContainer"></div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  import { log } from 'node_modules/astro/dist/core/logger/core';
+
+  //Dibujando el Canvas o Lienso
+  const canvas = document.getElementById('gameCanvas') as HTMLCanvasElement;
+  const ctx = canvas.getContext('2d') as CanvasRenderingContext2D;
+
+  //imagen de fondo
+  const bgImagePath = '/src/assets/images/juego/nubes.jpg';
+
+  //Imagen del Avión
+  const airplaneImage = new Image();
+  airplaneImage.src = '/src/assets/images/juego/avion.png';
+  //Imagen de las Nubes
+  const bgImage = new Image();
+  bgImage.src = bgImagePath;
+
+  //Posicion y Dimensiones del avion
+  let airplaneX: number;
+  let airplaneY: number;
+  let airplaneWidth: number;
+  let airplaneHeight: number;
+
+  //   Variables Globales
+  let bgX = 0;
+  const bgSpeed = 2;
+  let lastTime: number = 0;
+  let gamePaused = false;
+  let currentQuestionIndex = 0;
+  let currentAnswer: string | null = null;
+
+  // Tamaños de referencia
+  const referenceAirplaneWidth = 100;
+  const referenceAirplaneHeight = 100;
+  const referenceObjectWidth = 20;
+  const referenceObjectHeight = 30;
+
+  // Almacenar las respuestas
+  const answers: (string | null)[] = [];
+
+  // Tipo de Preguntas
+  interface Question {
+    q: string;
+    options: string[];
+    indice: number;
+  }
+
+  //Coleccion de Preguntas
+  const questions: Question[] = [
+    {
+      q: '¿Qué tipo de entorno prefieres para tus vacaciones?',
+      options: ['A: Playa', 'B: Montaña', 'C: Ciudad'],
+      indice: 0,
+    },
+    {
+      q: '¿Te gustaría explorar un destino internacional o nacional?',
+      options: ['A: Internacional', 'B: Nacional', 'C: Indiferente'],
+      indice: 1,
+    },
+    {
+      q: 'What is the capital of France?',
+      options: ['A: Paris', 'B: Rome', 'C: Berlin'],
+      indice: 2,
+    },
+  ];
+
+  //Objetos(TypeScript)
+  interface GameObject {
+    x: number;
+    y: number;
+    width: number;
+    height: number;
+    image: HTMLImageElement;
+    isCollided: boolean;
+  }
+  //Coleccion de Objetos
+  const objects: GameObject[] = [
+    {
+      x: 850,
+      y: 200,
+      width: 20,
+      height: 30,
+      image: new Image(),
+      isCollided: false,
+    },
+  ];
+
+  // Cargar la imagen del objeto a colisionar
+  objects[0].image.src = '/src/assets/images/juego/obj1.png';
+
+  //Dimensiones del canvas
+  function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const scaleX = canvas.width / 800;
+    const scaleY = canvas.height / 600;
+
+    airplaneWidth = referenceAirplaneWidth * Math.min(scaleX, scaleY);
+    airplaneHeight = referenceAirplaneHeight * Math.min(scaleX, scaleY);
+
+    objects[0].width = referenceObjectWidth * Math.min(scaleX, scaleY);
+    objects[0].height = referenceObjectHeight * Math.min(scaleX, scaleY);
+
+    airplaneX = canvas.width / 2 - airplaneWidth / 2;
+    airplaneY = canvas.height / 2 - airplaneHeight / 2;
+  }
+
+  // Redimensionar el canvas al cargar la página y al cambiar el tamaño de la ventana
+  window.addEventListener('resize', resizeCanvas);
+  resizeCanvas();
+
+  //Funcion para detectar colision
+  function checkCollision(obj: GameObject): boolean {
+    return (
+      airplaneX < obj.x + obj.width &&
+      airplaneX + airplaneWidth > obj.x &&
+      airplaneY < obj.y + obj.height &&
+      airplaneHeight + airplaneY > obj.y
+    );
+  }
+
+  function draw(time: number) {
+    if (!gamePaused) {
+      const deltaTime = time - lastTime;
+      lastTime = time;
+
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      bgX -= bgSpeed * (deltaTime / 16);
+      if (bgX <= -canvas.width) {
+        bgX = 0;
+      }
+      //Dibujar el Fondo
+      ctx.drawImage(bgImage, bgX, 0, canvas.width, canvas.height);
+      ctx.drawImage(bgImage, bgX + canvas.width, 0, canvas.width, canvas.height);
+
+      //Dibujar los Objetos
+      objects.forEach((obj) => {
+        if (!obj.isCollided) {
+          // Solo dibujar si el objeto no ha sido colisionado
+          ctx.drawImage(obj.image, obj.x, obj.y, obj.width, obj.height);
+          if (checkCollision(obj)) {
+            obj.isCollided = true; // Marcar como colisionado
+            showQuestion();
+          }
+        }
+      });
+
+      ctx.drawImage(airplaneImage, airplaneX, airplaneY, airplaneWidth, airplaneHeight);
+    }
+
+    requestAnimationFrame(draw);
+  }
+
+  //Mover el avion en el canvas
+  function handleKeydown(event: KeyboardEvent) {
+    const speed = 6;
+    const key = event.key.toLocaleLowerCase();
+
+    if (key === 'a' || event.key === 'ArrowLeft') {
+      airplaneX -= speed;
+    } else if (key === 'd' || event.key === 'ArrowRight') {
+      airplaneX += speed;
+    } else if (key === 'w' || event.key === 'ArrowUp') {
+      airplaneY -= speed;
+    } else if (key === 's' || event.key === 'ArrowDown') {
+      airplaneY += speed;
+    }
+  }
+
+  // Mover el avión con el clic del mouse o toque en la pantalla
+  function handlePointer(event: MouseEvent | TouchEvent) {
+    let rect = canvas.getBoundingClientRect();
+    let mouseX, mouseY;
+
+    if (event.type === 'touchstart') {
+      const touch = (event as TouchEvent).touches[0];
+      mouseX = touch.clientX - rect.left;
+      mouseY = touch.clientY - rect.top;
+    } else {
+      mouseX = (event as MouseEvent).clientX - rect.left;
+      mouseY = (event as MouseEvent).clientY - rect.top;
+    }
+
+    // Actualizar la posición del avión
+    airplaneX = mouseX - airplaneWidth / 2;
+    airplaneY = mouseY - airplaneHeight / 2;
+  }
+
+  //Mostrar las preguntas
+  function showQuestion() {
+    const question = questions[currentQuestionIndex];
+    const modal = document.getElementById('questionModal') as HTMLElement;
+    const questionText = document.getElementById('questionText') as HTMLElement;
+    const optionsContainer = document.getElementById('optionsContainer') as HTMLElement;
+
+    optionsContainer.innerHTML = '';
+
+    questionText.textContent = question.q;
+
+    question.options.forEach((option, index) => {
+      const button = document.createElement('button');
+      button.className = 'option-button';
+      button.textContent = option;
+      button.onclick = () => handleOptionClick(index);
+
+      optionsContainer.appendChild(button);
+    });
+
+    // Mostrar el modal
+    modal.classList.remove('hidden');
+  }
+
+  function handleOptionClick(selectedIndex: number) {
+    const question = questions[currentQuestionIndex];
+
+    selectedIndex === question.indice && (currentAnswer = 'correct');
+
+    const modal = document.getElementById('questionModal') as HTMLElement;
+    modal.classList.add('hidden'); // Ocultar el modal
+
+    resumeGame();
+  }
+
+  //TODO Funcion Continuar El Juego
+  function resumeGame() {
+    if (currentQuestionIndex < questions.length - 1) {
+      currentQuestionIndex++;
+      gamePaused = false;
+    } else {
+      // TODO: Agregar lógica para terminar el juego
+      alert('¡Juego terminado! Respuestas guardadas: ' + answers.join(', '));
+
+      // Código para finalizar el juego
+      // simulateLanding();
+    }
+  }
+
+  // function simulateLanding() {
+  //   // TODO: Agregar lógica para el aterrizaje del avión aquí
+  //   alert('¡El avión ha aterrizado!');
+  // }
+
+  bgImage.onload = () => {
+    requestAnimationFrame(draw);
+  };
+  window.addEventListener('resize', resizeCanvas);
+  window.addEventListener('keydown', handleKeydown);
+  canvas.addEventListener('click', handlePointer);
+</script>
