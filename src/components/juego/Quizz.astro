@@ -15,8 +15,6 @@ import '../juego/Quizz.scss';
 </html>
 
 <script>
-  import { log } from 'node_modules/astro/dist/core/logger/core';
-
   //Dibujando el Canvas o Lienso
   const canvas = document.getElementById('gameCanvas') as HTMLCanvasElement;
   const ctx = canvas.getContext('2d') as CanvasRenderingContext2D;
@@ -37,13 +35,12 @@ import '../juego/Quizz.scss';
   let airplaneWidth: number;
   let airplaneHeight: number;
 
-  //   Variables Globales
+  // Variables Globales
   let bgX = 0;
   const bgSpeed = 2;
   let lastTime: number = 0;
   let gamePaused = false;
   let currentQuestionIndex = 0;
-  let currentAnswer: string | null = null;
 
   // Tamaños de referencia
   const referenceAirplaneWidth = 100;
@@ -52,7 +49,7 @@ import '../juego/Quizz.scss';
   const referenceObjectHeight = 30;
 
   // Almacenar las respuestas
-  const answers: (string | null)[] = [];
+  const answers: string[] = [];
 
   // Tipo de Preguntas
   interface Question {
@@ -61,7 +58,7 @@ import '../juego/Quizz.scss';
     indice: number;
   }
 
-  //Coleccion de Preguntas
+  // Colección de Preguntas
   const questions: Question[] = [
     {
       q: '¿Qué tipo de entorno prefieres para tus vacaciones?',
@@ -80,7 +77,7 @@ import '../juego/Quizz.scss';
     },
   ];
 
-  //Objetos(TypeScript)
+  // Objetos(TypeScript)
   interface GameObject {
     x: number;
     y: number;
@@ -89,7 +86,8 @@ import '../juego/Quizz.scss';
     image: HTMLImageElement;
     isCollided: boolean;
   }
-  //Coleccion de Objetos
+
+  // Colección de Objetos
   const objects: GameObject[] = [
     {
       x: 850,
@@ -99,12 +97,21 @@ import '../juego/Quizz.scss';
       image: new Image(),
       isCollided: false,
     },
+    {
+      x: 950,
+      y: 200,
+      width: 20,
+      height: 30,
+      image: new Image(),
+      isCollided: true,
+    },
   ];
 
   // Cargar la imagen del objeto a colisionar
   objects[0].image.src = '/src/assets/images/juego/obj1.png';
+  objects[1].image.src = '/src/assets/images/juego/obj1.png';
 
-  //Dimensiones del canvas
+  // Dimensiones del canvas
   function resizeCanvas() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
@@ -115,8 +122,10 @@ import '../juego/Quizz.scss';
     airplaneWidth = referenceAirplaneWidth * Math.min(scaleX, scaleY);
     airplaneHeight = referenceAirplaneHeight * Math.min(scaleX, scaleY);
 
-    objects[0].width = referenceObjectWidth * Math.min(scaleX, scaleY);
-    objects[0].height = referenceObjectHeight * Math.min(scaleX, scaleY);
+    objects.forEach((obj) => {
+      obj.width = referenceObjectWidth * Math.min(scaleX, scaleY);
+      obj.height = referenceObjectHeight * Math.min(scaleX, scaleY);
+    });
 
     airplaneX = canvas.width / 2 - airplaneWidth / 2;
     airplaneY = canvas.height / 2 - airplaneHeight / 2;
@@ -126,7 +135,7 @@ import '../juego/Quizz.scss';
   window.addEventListener('resize', resizeCanvas);
   resizeCanvas();
 
-  //Funcion para detectar colision
+  // Función para detectar colisión
   function checkCollision(obj: GameObject): boolean {
     return (
       airplaneX < obj.x + obj.width &&
@@ -136,6 +145,7 @@ import '../juego/Quizz.scss';
     );
   }
 
+  // Función para dibujar en el canvas
   function draw(time: number) {
     if (!gamePaused) {
       const deltaTime = time - lastTime;
@@ -147,47 +157,50 @@ import '../juego/Quizz.scss';
       if (bgX <= -canvas.width) {
         bgX = 0;
       }
-      //Dibujar el Fondo
+
+      // Dibujar el fondo
       ctx.drawImage(bgImage, bgX, 0, canvas.width, canvas.height);
       ctx.drawImage(bgImage, bgX + canvas.width, 0, canvas.width, canvas.height);
 
-      //Dibujar los Objetos
+      // Dibujar los objetos
       objects.forEach((obj) => {
         if (!obj.isCollided) {
           // Solo dibujar si el objeto no ha sido colisionado
           ctx.drawImage(obj.image, obj.x, obj.y, obj.width, obj.height);
           if (checkCollision(obj)) {
             obj.isCollided = true; // Marcar como colisionado
-            showQuestion();
+            gamePaused = true; // Pausar el juego
+            showQuestion(); // Mostrar la pregunta
           }
         }
       });
 
+      // Dibujar el avión
       ctx.drawImage(airplaneImage, airplaneX, airplaneY, airplaneWidth, airplaneHeight);
     }
 
     requestAnimationFrame(draw);
   }
 
-  //Mover el avion en el canvas
+  // Mover el avión con el teclado
   function handleKeydown(event: KeyboardEvent) {
     const speed = 6;
-    const key = event.key.toLocaleLowerCase();
+    const key = event.key.toLowerCase();
 
-    if (key === 'a' || event.key === 'ArrowLeft') {
+    if (key === 'a' || key === 'arrowleft') {
       airplaneX -= speed;
-    } else if (key === 'd' || event.key === 'ArrowRight') {
+    } else if (key === 'd' || key === 'arrowright') {
       airplaneX += speed;
-    } else if (key === 'w' || event.key === 'ArrowUp') {
+    } else if (key === 'w' || key === 'arrowup') {
       airplaneY -= speed;
-    } else if (key === 's' || event.key === 'ArrowDown') {
+    } else if (key === 's' || key === 'arrowdown') {
       airplaneY += speed;
     }
   }
 
   // Mover el avión con el clic del mouse o toque en la pantalla
   function handlePointer(event: MouseEvent | TouchEvent) {
-    let rect = canvas.getBoundingClientRect();
+    const rect = canvas.getBoundingClientRect();
     let mouseX, mouseY;
 
     if (event.type === 'touchstart') {
@@ -204,7 +217,7 @@ import '../juego/Quizz.scss';
     airplaneY = mouseY - airplaneHeight / 2;
   }
 
-  //Mostrar las preguntas
+  // Mostrar las preguntas
   function showQuestion() {
     const question = questions[currentQuestionIndex];
     const modal = document.getElementById('questionModal') as HTMLElement;
@@ -224,44 +237,43 @@ import '../juego/Quizz.scss';
       optionsContainer.appendChild(button);
     });
 
-    // Mostrar el modal
     modal.classList.remove('hidden');
   }
 
+  // Manejar la selección de opciones
   function handleOptionClick(selectedIndex: number) {
     const question = questions[currentQuestionIndex];
 
-    selectedIndex === question.indice && (currentAnswer = 'correct');
+    const currentAnswer = selectedIndex === question.indice ? 'correct' : 'incorrect';
+    answers.push(currentAnswer);
 
     const modal = document.getElementById('questionModal') as HTMLElement;
-    modal.classList.add('hidden'); // Ocultar el modal
+    modal.classList.add('hidden');
 
     resumeGame();
   }
 
-  //TODO Funcion Continuar El Juego
+  // Función para continuar el juego
   function resumeGame() {
+    gamePaused = false;
+
     if (currentQuestionIndex < questions.length - 1) {
       currentQuestionIndex++;
-      gamePaused = false;
-    } else {
-      // TODO: Agregar lógica para terminar el juego
-      alert('¡Juego terminado! Respuestas guardadas: ' + answers.join(', '));
+      objects[currentQuestionIndex].isCollided = false;
+    }
 
-      // Código para finalizar el juego
-      // simulateLanding();
+    if (currentQuestionIndex >= questions.length) {
+      // TODO: Mostrar aterrizaje
     }
   }
 
-  // function simulateLanding() {
-  //   // TODO: Agregar lógica para el aterrizaje del avión aquí
-  //   alert('¡El avión ha aterrizado!');
-  // }
+  // Iniciar el bucle de animación
+  requestAnimationFrame(draw);
 
-  bgImage.onload = () => {
-    requestAnimationFrame(draw);
-  };
-  window.addEventListener('resize', resizeCanvas);
+  // Manejar eventos de teclado
   window.addEventListener('keydown', handleKeydown);
-  canvas.addEventListener('click', handlePointer);
+
+  // Manejar clics de mouse y toques en pantalla
+  canvas.addEventListener('mousedown', handlePointer);
+  canvas.addEventListener('touchstart', handlePointer);
 </script>
