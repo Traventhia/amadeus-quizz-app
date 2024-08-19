@@ -1,0 +1,18 @@
+---
+// Styles
+    import './Plane.scss'
+    
+// Images
+    import Avion from '@assets/pantallaCarga/plane.png';
+
+// Props
+const { departureImage, arrivalImage } = Astro.props; 
+---
+
+<div class="plane">
+    <img src={departureImage} alt='Despegue' class="departureImage">
+    <div class="planeBody">
+        <img src={Avion.src} alt="Avion">
+    </div>
+    <img src={arrivalImage} alt='Aterrizaje' class="arrivalImage">
+</div>
