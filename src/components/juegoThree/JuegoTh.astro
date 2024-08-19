@@ -19,9 +19,10 @@ import './juegoTh.scss';
     />
 
     <link rel="stylesheet" href="/css/game.css" />
-    <script type="text/javascript" src="js/TweenMax.min.js"></script>
-    <script type="text/javascript" src="js/three.min.js"></script>
-    <script type="text/javascript" src="js/game.js"></script>
+    <script is:inline type="text/javascript" src="js/TweenMax.min.js"></script>
+    <script is:inline type="text/javascript" src="js/three.min.js"></script>
+    <script is:inline type="text/javascript" src="js/game.js"></script>
+    <script is:inline type="text/javascript" src="js/Questions.js"></script>
   </head>
 </html>
 <body>
@@ -99,4 +100,24 @@ import './juegoTh.scss';
     <a class="demo-link" href="part1.html">Part 1</a>
     <a class="demo-link" href="part2.html">Part 2</a>
   </nav>
+  <a
+    class="credits"
+    href="httas://github.com/yakudoo/TheAviator/tree/master"
+    target="_blank"
+  >
+    Creditos <span>❤</span>
+  </a>
+  
+  <div id="questionModal" class="modal">
+    <div class="modal-content">
+      <h2></h2>
+      <p></p>
+      <div class="options">
+        <button class="option"></button>
+        <button class="option"></button>
+        <button class="option"></button>
+        <button class="option"></button>
+      </div>
+    </div>
+  </div>
 </body>
