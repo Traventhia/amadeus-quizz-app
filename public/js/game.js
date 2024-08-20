@@ -38,9 +38,9 @@ function resetGame() {
 
     level: 1,
     levelLastUpdate: 0,
-    distanceForLevelUpdate: 1000,
+    distanceForLevelUpdate: 150,
 
-    planeDefaultHeight: 100,
+    planeDefaultHeight: 120,
     planeAmpHeight: 80,
     planeAmpWidth: 75,
     planeMoveSensivity: 0.005,
@@ -74,15 +74,16 @@ function resetGame() {
     coinLastSpawn: 0,
     distanceForCoinsSpawn: 100,
 
-    ennemyDistanceTolerance: 10,
+    ennemyDistanceTolerance: 20,
     ennemyValue: 10,
     ennemiesSpeed: 0.6,
     ennemyLastSpawn: 0,
-    distanceForEnnemiesSpawn: 50,
+    distanceForEnnemiesSpawn: 70,
 
     status: 'playing',
   };
   fieldLevel.innerHTML = Math.floor(game.level);
+  hideReplay();
 }
 
 //THREEJS RELATED VARIABLES
@@ -141,6 +142,18 @@ function createScene() {
   //*/
 }
 
+// Manejadores de preguntas
+
+// La funcion se llama cada vez que el avion coliisiona con un enemigo
+function showQuestion() {
+  game.status = 'gameover';
+
+  showNextQuestion(() => {
+    resetGame();
+    hideReplay();
+  });
+}
+
 // MOUSE AND SCREEN EVENTS
 
 function handleWindowResize() {
@@ -162,13 +175,6 @@ function handleTouchMove(event) {
   var tx = -1 + (event.touches[0].pageX / WIDTH) * 2;
   var ty = 1 - (event.touches[0].pageY / HEIGHT) * 2;
   mousePos = { x: tx, y: ty };
-}
-
-function handleMouseUp(event) {
-  if (game.status == 'waitingReplay') {
-    resetGame();
-    hideReplay();
-  }
 }
 
 function handleTouchEnd(event) {
@@ -668,7 +674,8 @@ EnnemiesHolder.prototype.rotateEnnemies = function () {
       game.planeCollisionSpeedY = (100 * diffPos.y) / d;
       ambientLight.intensity = 2;
 
-      removeEnergy();
+      showQuestion();
+
       i--;
     } else if (ennemy.angle > Math.PI) {
       ennemiesPool.unshift(this.ennemiesInUse.splice(i, 1)[0]);
@@ -972,7 +979,6 @@ function addEnergy() {
 function removeEnergy() {
   game.energy -= game.ennemyValue;
   game.energy = Math.max(0, game.energy);
-  showNextQuestion();
   return;
 }
 
@@ -1037,11 +1043,18 @@ function updatePlane() {
 }
 
 function showReplay() {
-  replayMessage.style.display = 'block';
+  replayMessage.style.display = 'flex';
+  replayMessage.classList.add('animate__fadeIn');
+
+  // Animaciones de los botones
+  replayButton.classList.add('animate__tada');
+  replayButton.classList.add('animate__delay-1s');
 }
 
 function hideReplay() {
   replayMessage.style.display = 'none';
+  replayButton.classList.remove('animate__tada');
+  replayButton.classList.remove('animate__delay-1s');
 }
 
 function normalize(v, vmin, vmax, tmin, tmax) {
@@ -1064,6 +1077,9 @@ function init(event) {
   fieldLevel = document.getElementById('levelValue');
   levelCircle = document.getElementById('levelCircleStroke');
 
+  // Boton que se muestra al finalizaar las preguntas
+  replayButton = document.getElementById('replayButton');
+
   resetGame();
   createScene();
 
@@ -1077,10 +1093,8 @@ function init(event) {
 
   document.addEventListener('mousemove', handleMouseMove, false);
   document.addEventListener('touchmove', handleTouchMove, false);
-  document.addEventListener('mouseup', handleMouseUp, false);
+  //document.addEventListener('mouseup', handleMouseUp, false); <--- Encargado de hacer el handle click para reiniciar el juego
   document.addEventListener('touchend', handleTouchEnd, false);
 
   loop();
 }
-
-window.addEventListener('load', init, false);
