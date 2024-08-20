@@ -133,16 +133,24 @@
   width: 100%;
   text-align: center;
   text-transform: uppercase;
-  pointer-events: none;
 }
 
 .message--replay {
-  font-size: 1.25vw;
-  bottom: 40vh;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  height: 100vh;
   display: none;
   text-indent: 0.5em;
   letter-spacing: 0.5em;
-  color: #d1b790;
+  color: #ffffffba;
+  background-color: rgba(0, 0, 0, 0.3);
+
+  /* CUANDO SE VISUALICE EL COMPONENTE */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
 }
 
 .message--instructions {
@@ -163,9 +171,11 @@
   0% {
     opacity: 1;
   }
+
   50% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
@@ -175,9 +185,11 @@
   0% {
     opacity: 1;
   }
+
   50% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
@@ -188,6 +200,7 @@
     font-size: 0.75em;
     top: 6.5em;
   }
+
   .header h2 {
     letter-spacing: 0.65em;
   }
@@ -198,11 +211,13 @@
   bottom: 10px;
   left: 10px;
   color: rgba(15, 14, 14, 0.632);
+  text-decoration: none;
+
 
   &:hover {
     color: rgba(15, 14, 14, 0.868);
 
-    & > span {
+    &>span {
       color: red;
     }
   }
