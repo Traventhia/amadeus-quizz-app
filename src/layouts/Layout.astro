@@ -6,6 +6,7 @@ interface LayoutProps {
 const { title } = Astro.props;
 
 import NavBar from '@components/Layouts/NavBar.astro';
+import NotFountScreen from '@components/Layouts/NotFountScreen.astro';
 import Slider from '@components/Layouts/Slider.astro';
 ---
 
@@ -16,5 +17,7 @@ import Slider from '@components/Layouts/Slider.astro';
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
   </head>
-  <body> </body>
+  <body>
+    <NotFountScreen />
+  </body>
 </html>
