@@ -6,6 +6,8 @@ interface LayoutProps {
 const { title } = Astro.props;
 
 import NavBar from '@components/Layouts/NavBar.astro';
+import UpTopPage from '@components/buttons/UpTopPage.astro';
+import Footer from '@components/Layouts/Footer.astro';
 ---
 
 <!doctype html>
@@ -17,5 +19,14 @@ import NavBar from '@components/Layouts/NavBar.astro';
   </head>
   <body>
     <NavBar />
+    <slot />
+    <UpTopPage />
+    <!-- Queda pendiente el Footer debido a algunas incompatibilidades -->
   </body>
 </html>
+
+<style>
+  body {
+    position: relative;
+  }
+</style>
