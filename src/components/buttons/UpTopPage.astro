@@ -1,0 +1,52 @@
+---
+import ArroUp from '@assets/icons/arrow-up.svg';
+import 'animate.css';
+---
+
+<div class="contenedor-flecha" id="contenedor-flecha">
+  <img src={ArroUp.src} alt="" height="30" id="image_arrow" />
+</div>
+
+<style>
+  .contenedor-flecha {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    bottom: 10px;
+    right: 40px;
+    cursor: pointer;
+    border-radius: 100%;
+    padding: 10px;
+
+    animation: alternate-reverse;
+  }
+</style>
+
+<script>
+  let contenedorFlechaArriba = document.getElementById('contenedor-flecha');
+
+  window.onscroll = () => {
+    console.log(document.documentElement.scrollTop);
+    if (document.documentElement.scrollTop > 30) {
+      contenedorFlechaArriba!.style.display = 'block';
+    } else {
+      contenedorFlechaArriba!.style.display = 'none';
+    }
+  };
+
+  contenedorFlechaArriba?.addEventListener('click', () => {
+    document.getElementById('image_arrow')?.classList.toggle('animate__animated');
+    document.getElementById('image_arrow')?.classList.toggle('animate__bounceOutDown');
+
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+
+      setTimeout(() => {
+        document.getElementById('image_arrow')?.classList.toggle('animate__animated');
+        document
+          .getElementById('image_arrow')
+          ?.classList.toggle('animate__bounceOutDown');
+      }, 1000);
+    }, 700);
+  });
+</script>
