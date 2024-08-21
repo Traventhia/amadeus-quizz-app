@@ -1,0 +1,119 @@
+---
+import './juegoTh.scss';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Traventhia descubre tu mundo</title>
+    <meta name="description" content="The" />
+    <meta name="keywords" content="The" />
+    <meta name="author" content="The" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,700italic"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="/images/traventhia-icon.jpg" type="image/x-icon" />
+
+    <link rel="stylesheet" href="/css/game.css" />
+    <script is:inline type="text/javascript" src="js/utils/TweenMax.min.js"></script>
+    <script is:inline type="text/javascript" src="js/utils/three.min.js"></script>
+    <script is:inline type="text/javascript" src="js/game.js"></script>
+    <script is:inline type="text/javascript" src="js/modal.js"></script>
+    <script is:inline type="module" src="js/main.js"></script>
+  </head>
+</html>
+<body>
+  <div class="game-holder" id="gameHolder">
+    <div class="header">
+      <h1><span>By</span>Traventhia</h1>
+      <h2>Con <span style="color: red;">❤</span> para Nodo</h2>
+      <div class="score" id="score">
+        <div class="score__content" id="level">
+          <div class="score__label">Nivel</div>
+          <div class="score__value score__value--level" id="levelValue">1</div>
+          <svg class="level-circle" id="levelCircle" viewBox="0 0 200 200">
+            <circle
+              id="levelCircleBgr"
+              r="80"
+              cx="100"
+              cy="100"
+              fill="none"
+              stroke="#d1b790"
+              stroke-width="24px"></circle>
+            <circle
+              id="levelCircleStroke"
+              r="80"
+              cx="100"
+              cy="100"
+              fill="none"
+              stroke="#68c3c0"
+              stroke-width="14px"
+              stroke-dasharray="502"></circle>
+          </svg>
+        </div>
+        <div class="score__content" id="dist">
+          <div class="score__label">distancia</div>
+          <div class="score__value score__value--dist" id="distValue">000</div>
+        </div>
+        <div class="score__content" id="energy">
+          <div class="score__label">combustible</div>
+          <div class="score__value score__value--energy" id="energyValue">
+            <div class="energy-bar" id="energyBar"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="world" id="world"></div>
+
+    <div class="message message--instructions" id="instructions">
+      Toma las piedras azules (son tu combustible)<span
+        >Choca los asteroides (son tus preguntas)</span
+      >
+    </div>
+  </div>
+
+  <div class="message message--replay animate__animated" id="replayMessage">
+    <span id="replayTextMessage" class="animate__animated"> Haz finalizado tu quiz </span>
+    <button class="replay-button animate__animated" id="replayButton">Reiniciar</button>
+  </div>
+
+  <!-- modal -->
+  <div id="questionModal" class="modal animate__animated">
+    <div class="modal-content animate__animated">
+      <p></p>
+      <h2></h2>
+      <div class="options">
+        <button class="option"></button>
+        <button class="option"></button>
+        <button class="option"></button>
+        <button class="option"></button>
+      </div>
+    </div>
+  </div>
+
+  <a
+    class="credits"
+    href="httas://github.com/yakudoo/TheAviator/tree/master"
+    target="_blank"
+  >
+    Creditos <span>❤</span>
+  </a>
+
+  <div id="questionModal" class="modal">
+    <div class="modal-content">
+      <h2></h2>
+      <p></p>
+      <div class="options">
+        <button class="option"></button>
+        <button class="option"></button>
+        <button class="option"></button>
+        <button class="option"></button>
+      </div>
+    </div>
+  </div>
+</body>

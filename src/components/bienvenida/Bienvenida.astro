@@ -1,0 +1,57 @@
+---
+import './Bienvenida.scss';
+import Bienvenido from '@assets/images/bienvenida/bienvenida.jpg';
+---
+
+<section class="welcome-section">
+  <div class="content-blocks">
+    <div class="company-info">
+      <h2>¿Quiénes somos?</h2>
+      <p>
+        Estamos aquí para mejorar la experiencia de viajar para todos. Puede que no
+        siempre seamos visibles, pero estamos en todas partes.
+      </p>
+      <button id="openModal" class="learn-more-btn">Saber más</button>
+    </div>
+    <div class="company-image">
+      <img alt="Imagen de bienvenida" src={Bienvenido.src} />
+    </div>
+  </div>
+
+  <div id="videoModal" class="modal-overlay">
+    <div class="modal-content">
+      <button id="closeModal" class="close-button">X</button>
+      <iframe
+        id="youtubeVideo"
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/rb_gyI6npjE"
+        title="YouTube video player"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <script>
+    const openModal = document.getElementById('openModal');
+    const closeModal = document.getElementById('closeModal');
+    const videoModal = document.getElementById('videoModal');
+    const youtubeVideo = document.getElementById('youtubeVideo') as HTMLIFrameElement;
+
+    const videoSrc = youtubeVideo ? youtubeVideo.src : '';
+
+    openModal &&
+      openModal.addEventListener('click', function () {
+        videoModal ? (videoModal.style.display = 'flex') : '';
+      });
+
+    closeModal &&
+      closeModal.addEventListener('click', function () {
+        videoModal && (videoModal.style.display = 'none');
+        youtubeVideo && youtubeVideo.src == '';
+        setTimeout(() => {
+          youtubeVideo.src = videoSrc;
+        }, 100);
+      });
+  </script>
+</section>
