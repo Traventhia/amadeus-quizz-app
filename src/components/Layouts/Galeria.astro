@@ -1,0 +1,99 @@
+---
+// Styles
+import './Galeria.scss';
+import Card from '@components/card/Card.astro';
+
+// Images for the Cards
+const imagesData = [
+    { src: '/src/assets/images/destinos/cable-car-8357177_1280.webp', alt: 'Playa' },
+    { src: '/src/assets/images/destinos/camogli-4324509_1280.jpg', alt: 'Bosque' },
+    { src: '/src/assets/images/destinos/cathedral-6830526_1280.jpg', alt: 'Ciudad' },
+    { src: '/src/assets/images/destinos/galata-4043037_1280.jpg', alt: 'Montaña' },
+    
+];
+
+function getRandomGridPosition(currentIndex: any, occupiedCells: Set<string>) {
+    const totalColumns = 6;
+    let rowStart, colStart, rowSpan, colSpan;
+    
+    do {
+        rowStart = Math.floor(currentIndex / totalColumns) + 1;
+        colStart = (currentIndex % totalColumns) + 1;
+        rowSpan = Math.floor(Math.random() * 2) + 1;
+        colSpan = Math.floor(Math.random() * 2) + 1;
+    } while (isOverlapping(rowStart, colStart, rowSpan, colSpan, occupiedCells));
+
+    for (let r = rowStart; r < rowStart + rowSpan; r++) {
+        for (let c = colStart; c < colStart + colSpan; c++) {
+            occupiedCells.add(`${r}-${c}`);
+        }
+    }
+
+    return `
+        grid-row: ${rowStart} / span ${rowSpan};
+        grid-column: ${colStart} / span ${colSpan};
+    `;
+}
+
+function isOverlapping(rowStart: number, colStart: number, rowSpan: number, colSpan: number, occupiedCells: Set<string>) {
+    for (let r = rowStart; r < rowStart + rowSpan; r++) {
+        for (let c = colStart; c < colStart + colSpan; c++) {
+            if (occupiedCells.has(`${r}-${c}`)) {
+                return true; // Overlap detected
+            }
+        }
+    }
+    return false; // No overlap
+}
+
+const occupiedCells = new Set<string>();
+const cardsWithPositions = imagesData.map((cardImage, index) => ({
+    ...cardImage,
+    style: getRandomGridPosition(index, occupiedCells),
+}));
+---
+
+<div class="contain__galeria">
+    <div class="containt__text">
+        <div class="title">
+            <h1>Galeria Amadus</h1>
+        </div>
+        <div class="subtitle">
+            <h3>Nuestros clientes también comparten su alegria con nosotros</h3>
+        </div>
+    </div>
+
+
+    <div class="container__sections">
+        <section class="contain__filters">
+            <div class="contain__title">
+                <h2>Filtros</h2>
+            </div>
+    
+            <div class="container__buttons">
+                <button> <span>Playa</span> </button>
+    
+                <button> <span>Bosque</span> </button>
+    
+                <button> <span>Ciudad</span> </button>
+    
+                <button> <span>Montaña</span> </button>
+            </div>
+        </section>
+    
+        <section class="galeria">
+            <div class="container__images">
+                {cardsWithPositions.map((cardImage, index) => (
+                    <Card
+                        src={cardImage.src}
+                        alt={cardImage.alt}
+                        title=''
+                        description=''
+                        style={cardImage.style}
+                    />
+                ))} 
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
