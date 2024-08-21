@@ -1,200 +1,147 @@
-* { 
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    box-sizing: border-box;
-
-
-}
-
-body{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
-    text-transform capitalize;
-
-}
-
-.container{
-
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.footer{
-background-color: #fdfefe;
-font-family: Arial, Helvetica, sans-serif;
-padding: 80px 0;
-
+.footer {
+  background-color: #fdfefe;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 80px 0;
 }
 
 .footer-row {
- display: flex;
- flex-wrap: wrap;
- color: #515a5a;
- text-align: right;
-
-   
+  display: flex;
+  flex-wrap: wrap;
+  color: #515a5a;
+  text-align: right;
 }
 
 .footer-links {
-    width: 25%;
-    padding: 0px 15;
+  width: 25%;
+  padding: 0px 15;
 }
 
 .footer-links h4:hover {
-    font-size: 20px;
-    color: #515a5a;
-    margin-bottom: 25px;
-    font-weight: 500;
-    border-bottom: 2px solid #3509d1;
-    padding-bottom: 10px;
-    display: inline-block;
-    
+  font-size: 20px;
+  color: #515a5a;
+  margin-bottom: 25px;
+  font-weight: 500;
+  border-bottom: 2px solid #3509d1;
+  padding-bottom: 10px;
+  display: inline-block;
 }
 
 .footer-links ul li a {
-    font-size: 18px;
-    text-decoration: none;
-    text-align: right;
-    color:#515a5a;
-    display: block;
-    margin-bottom: 15px;
-    transition: all .3s ease;
-
-
-
+  font-size: 18px;
+  text-decoration: none;
+  text-align: right;
+  color: #515a5a;
+  display: block;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
 }
 
-.footer-links ul li a:hover{
-    background-color: #aed6f1;
-    border-color: #aed6f1;
-    color: #2e86c1;
-    padding-left: 6px;
+.footer-links ul li a:hover {
+  background-color: #aed6f1;
+  border-color: #aed6f1;
+  color: #2e86c1;
+  padding-left: 6px;
 }
 
 .social-links a {
- display: inline-block;
- min-height: 40px;
- width: 40px;
- background-color: #bfc9ca ;
- margin: 0 10px 0 10px;
- text-align: center;
- line-height: 40px;
- border-radius: 50%;
- color: #34495e;
- transition: all .5s ease;
-
-
+  display: inline-block;
+  min-height: 40px;
+  width: 40px;
+  background-color: #bfc9ca;
+  margin: 0 10px 0 10px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #34495e;
+  transition: all 0.5s ease;
 }
 
-.social-links a:hover{
-background-color: #85c1e9;
-
+.social-links a:hover {
+  background-color: #85c1e9;
 }
 
-@media(max-width:991px) {
-    .footer-row{
-        text-align: left;
-        
-        
-    }
+@media (max-width: 991px) {
+  .footer-row {
+    text-align: left;
+  }
 
-    .footer-links{
-        width: 100%;
-        margin-bottom: 30px;
-    }
-    
-    
-}
-body {
-
-    margin: auto;
-    padding: 50px;
-
+  .footer-links {
+    width: 100%;
+    margin-bottom: 30px;
+  }
 }
 
-table{
+.footer {
+  background-color: #fdfefe;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 80px 0;
+
+  table {
     display: table;
     border: #27ae60 1px solid;
     width: 400px;
     font-size: 10;
-    
+  }
 
-}
-
-
-td {
+  td {
     font-size: 1.8em;
-    border: #27ae60 1px solid; 
+    border: #27ae60 1px solid;
     color: #169e1d;
-        
-}
+  }
 
-caption{
+  caption {
     font-size: 1.8em;
-    border: #27ae60 1px solid; 
+    border: #27ae60 1px solid;
     color: #169e1d;
     text-align: center;
-    
-}
+  }
 
-
-
-
-tr {
+  tr {
     font-size: 0.8em;
-    border: #27ae60 1px solid; 
+    border: #27ae60 1px solid;
     color: #169e1d;
     text-align: center;
-   
-    
-}
+  }
 
- 
-img{
-
+  img {
     width: 400px;
     height: 400px;
     display: flex;
     justify-content: center;
+  }
 
-
-}
-
-form{
-
+  form {
     border-radius: 10px;
     font-size: 1em;
     padding: 0px;
     width: 300%;
-    
   }
 
-input {
-border: solid 1px #27ae60;
-font-size: 1em;
-color: #82e0aa;
-font-size: 100%;
+  input {
+    border: solid 1px #27ae60;
+    font-size: 1em;
+    color: #82e0aa;
+    font-size: 100%;
+  }
 
-}
+  textarea {
+    border: solid 1px #27ae60;
+    font-size: 1em;
+    color: #82e0aa;
+  }
 
-textarea{
-
-border: solid 1px #27ae60;
-font-size: 1em;
-color: #82e0aa;
-
-
-}
-
-
-button {
-    border: none; 
+  button {
+    border: none;
     border-radius: 4px;
-    color: rgb(145, 78, 114); 
-    padding: 14px 28px; 
-    cursor: pointer; 
+    color: rgb(145, 78, 114);
+    padding: 14px 28px;
+    cursor: pointer;
+  }
+
+  button {
+    background-color: #4caf50;
+  } /* Green */
+  button:hover {
+    background-color: #169e1d;
+  }
 }
-
-button {background-color: #4CAF50;} /* Green */
-button:hover {background-color: #169e1d;}
-
