@@ -1,0 +1,116 @@
+.container__search {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 20px 0 0;
+    border: none;
+}
+
+
+.main{
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    object-fit: cover;
+}
+
+
+.img__background {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    animation: changeBackground 20s infinite;
+}
+@keyframes changeBackground {
+    0% {
+      background-image: url('images/cable-car-8357177_1280.webp');
+    }
+    25% {
+        background-image: url('images/camogli-4324509_1280.jpg');
+      }
+    50% {
+      background-image: url('images/cathedral-6830526_1280.jpg');
+    }
+    75% {
+        background-image: url('images/galata-4043037_1280.jpg');
+      }
+    100% {
+      background-image: url('images/hallstatt-3609863_1280.jpg');
+    }
+  }
+
+#results {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 20px;
+}
+
+.card {
+    width: 350px;
+    border-radius: 8px;
+    background-color: transparent; /* Fondo de la tarjeta */
+    color: #ffffff; /* Texto blanco */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out;
+    backdrop-filter: blur(20px);
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-content img {
+    width: 100%;
+    height: auto;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-content p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.card-content strong {
+    font-size: 16px;
+}
+
+/*******************************************/
+.input__search {
+    width: 395px;
+    margin: 0px 20px 10px 0px;
+    border: 2px solid transparent;
+    padding-left: 40px; 
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="%230000FF" viewBox="0 0 24 24"><path d="M10 2C5.58 2 2 5.58 2 10s3.58 8 8 8c1.61 0 3.11-.49 4.35-1.35l5.32 5.32c.2.2.45.29.71.29s.51-.1.71-.29a1.003 1.003 0 000-1.42l-5.32-5.32A7.952 7.952 0 0018 10c0-4.42-3.58-8-8-8zm0 14c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z"/></svg>');
+    background-repeat: no-repeat;
+    background-size: 22px;
+    background-position-y: center;
+    background-position-x: 22px;
+}
+
+.input__search:focus {
+    outline: none;
+    border: 2px solid rgb(27, 112, 151);
+}
+
+
+.input__text {
+    height: 48px;
+    padding: 0px 50px;
+    font-size: 14px;
+    border-radius: 50px;
+    box-sizing: border-box;
+    width: 50%;
+}
+.input__search::placeholder {
+    text-align: left;
+}
