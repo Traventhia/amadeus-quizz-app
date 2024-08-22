@@ -1,0 +1,59 @@
+.clouds {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    top: 20%;
+}
+
+.cloud_1, .cloud_2, .cloud_3, .cloud_4, .cloud_5 {
+    position: relative;
+}
+
+.cloud_1 {
+    top: 60px;
+}
+
+.cloud_2 {
+    top: 5px;
+}
+
+.cloud_3 {
+    top: 45px;
+}
+
+.cloud_4 {
+    top: 4px;
+}
+
+.cloud_5 {
+    top: 65px;
+}
+
+.clouds svg {
+    color: white;
+    animation: cloudAnimation 3s linear infinite;
+}
+
+@keyframes cloudAnimation {
+    0% {
+        opacity: 0;
+        transform: translateX(-150%);
+    }
+
+    10% {
+        opacity: 1;
+        transform: translateX(-130%);
+    }
+
+    90% {
+        opacity: 1;
+        transform: translateX(80%);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+}

@@ -1,0 +1,74 @@
+@import 'animate.css';
+
+body {
+  overflow: hidden;
+}
+
+.modal {
+  display: none; /* Oculto por defecto */
+  z-index: 1000;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.4);
+  font-family: 'Source Sans Pro', sans-serif;
+
+  /*CUANDO SE CAMBIE SU STATUS DE DISPLAY A FLEX*/
+  transition: all 0.5s ease;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #ffffffbb;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  text-align: center;
+  border-radius: 8px;
+
+  p {
+    color: rgba(0, 0, 0, 0.726);
+  }
+
+  h2 {
+    color: rgba(0, 0, 0, 0.726);
+    font-size: 1em;
+  }
+}
+
+.options button {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 18px;
+  background-color: #68c3c0f8;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.options button:hover {
+  background-color: #56a3a0;
+}
+
+.replay-button {
+  padding: 20px;
+  width: 350px;
+  background-color: #68c3c0ce;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #44ded9cf;
+  }
+}
