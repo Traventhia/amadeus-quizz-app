@@ -1,0 +1,83 @@
+---
+function getImagePath(numeroIm) {
+  return `/src/assets/images/paquetes/card${numeroIm}.jpg`;
+}
+
+const imageCount = 6;
+const images = Array.from({ length: imageCount }, (_, i) => getImagePath(i + 1));
+
+import CardPromo from './cardPromo.astro';
+
+const cardsData = [
+  {
+    title: 'Destinos Inteligentes',
+    description:
+      'Descubre ciudades que están revolucionando el turismo con tecnología avanzada...',
+    image: getImagePath(1),
+  },
+  {
+    title: 'Clasificación de Viajes Internacionales',
+    description:
+      'Explora cómo se categorizan los viajes globales según experiencias, actividades y propósitos...',
+    image: getImagePath(2),
+  },
+  {
+    title: 'Top Destinos Tecnológicos',
+    description:
+      'Visita las capitales de la innovación mundial, donde la tecnología se fusiona con el turismo...',
+    image: getImagePath(3),
+  },
+  {
+    title: 'Innovaciones en Viajes',
+    description:
+      'Desde la realidad virtual hasta la inteligencia artificial, conoce las últimas tecnologías que están transformando la forma en que viajamos...',
+    image: getImagePath(4),
+  },
+  {
+    title: 'Viajes Sostenibles y de nuevas aventuras',
+    description:
+      'Cómo la tecnología está ayudando a que los viajes internacionales sean más sostenibles y responsables...',
+    image: getImagePath(5),
+  },
+  {
+    title: 'Clasificación por Experiencia',
+    description:
+      'Conoce cómo se clasifican los destinos internacionales según la aventura, cultura, y relax que ofrecen...',
+    image: getImagePath(6),
+  },
+];
+---
+
+<div class="container__h">
+  <h2>Nuevo luagare por descubrir</h2>
+</div>
+<div class="container1">
+    <div class="container1__viajes">
+        <div class="container1__viajes--texto"
+            <h1 class="container1__viajes--titulo">
+              Vuela con Confianza, Descubre el Mundo con Nosotros
+            </h1>
+            <p class="container1__viajes--mensaje">
+              En nuestra aerolínea/agencia, cada detalle de tu viaje es importante. Desde la reserva
+              hasta el aterrizaje, nos dedicamos a ofrecerte seguridad, comodidad y un servicio
+              excepcional. Con nosotros, puedes explorar el mundo sabiendo que estás en buenas
+              manos. Viaja tranquilo, sueña en grande, y deja que te llevemos a descubrir lo mejor
+              que el mundo tiene para ofrecer.
+            </p>
+
+        </div>
+      </div>
+      <div class="container">
+        <div class="container__body">
+          <div class="card-container">
+            {
+              cardsData.map((card) => (
+                <CardPromo src={card.image} title={card.title} description={card.description} />
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    
+</div>
+

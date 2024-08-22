@@ -1,0 +1,132 @@
+//card promocion
+
+.container{
+    
+   
+    width: 100%;
+    position: relative;
+
+}
+
+
+.container__body{  
+    display: flex;
+    justify-content: center;}
+
+.container1{   
+    width: 90%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+
+    &--texto{
+        width: 70%;
+    }
+}
+
+.container__h{
+    
+    text-align: center;
+    color: #f9f4f4;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 2rem;
+    letter-spacing: 5px;
+    font-weight: 800;
+    padding:  10px 30px;
+    display: flex;
+    justify-content: left;
+}
+
+
+.container__h {
+    background: url('../../assets/images/paquetes/fondo1.ico.jpg');
+    height: 100%;
+    background-size: cover; 
+    background-position: bottom; 
+    background-repeat: no-repeat;
+}
+
+
+
+
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 30px;
+}
+
+.cardpromo {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    // margin: 10px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    .card-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    .card-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        opacity: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        transition: opacity 0.3s ease-in-out;
+        
+    .card-title {
+        font-size: 1.5em;
+        margin: 0;
+    }
+
+    .card-description {
+        font-size: 1em;
+        margin: 10px 0;
+    }
+
+    .card-button {
+        background: #ff583300;
+        color: white;
+        padding: 10px 20px;
+        border:#f9f4f4 solid 2px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background 0.3s ease-in-out;
+
+            &:hover {
+                background: #fdfdfd;
+                color: #000835;;
+            }
+        }
+    }
+    
+    &:hover .card-overlay {
+        opacity: 1;
+    }
+}
+
+@media (min-width: 768px) {
+    .card {
+        max-width: 400px;
+    }
+}    
