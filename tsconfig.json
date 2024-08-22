@@ -6,6 +6,12 @@
       "@components/*": ["src/components/*"],
       "@assets/*": ["src/assets/*"],
       "@layouts/*" : ["src/layouts/*"]
-    }
+    },
+    "target": "ES6",          // O la versión que necesites
+    "module": "ESNext",       // O "CommonJS" si es más apropiado
+    "strict": true,           // Asegura una verificación de tipo estricta
+    "esModuleInterop": true,  // Habilita la interoperabilidad con módulos ES
+    "skipLibCheck": true,     // Omite la verificación de tipos en archivos de biblioteca
+    "forceConsistentCasingInFileNames": true  // Consistencia en el uso de mayúsculas
   }
 }
