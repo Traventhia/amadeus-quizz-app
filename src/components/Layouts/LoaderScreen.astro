@@ -1,0 +1,23 @@
+---
+// Styles
+import './LoaderScreen.scss'
+
+// Images
+import Torre1 from '@assets/pantallaCarga/torre_1.ico'
+import Torre2 from '@assets/pantallaCarga/torre_2.ico'
+
+// Components
+import Cloud from "@components/pantallaCarga/cloud/Cloud.astro";
+import Plane from "@components/pantallaCarga/plane/Plane.astro";
+import Runway from "@components/pantallaCarga/runway/Runway.astro";
+---
+
+<div class="loader">
+    <div class="planeWrapper">
+        <div class="paisaje">
+            <Plane departureImage={Torre1} arrivalImage={Torre2}/>
+            <Cloud />
+            <Runway />
+        </div>
+    </div>
+</div>

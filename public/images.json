@@ -1,0 +1,284 @@
+{
+  "images": [
+    {
+      "src": "/public/assets/images/imagesGalery/cable-car-8357177_1280.webp",
+      "alt": "Image 1",
+      "filters": ["playa"]
+    },
+    {
+      "src": "/public/assets/images/imagesGalery/camogli-4324509_1280.jpg",
+      "alt": "Image 2",
+      "filters": ["ciudad"]
+    },
+    {
+      "src": "/public/assets/images/imagesGalery/cathedral-6830526_1280.jpg",
+      "alt": "Image 3",
+      "filters": ["montana"]
+    },
+    {
+      "src": "/public/assets/images/imagesGalery/galata-4043037_1280.jpg",
+      "alt": "Image 3",
+      "filters": ["bosque"]
+    },
+    {
+      "src": "/public/assets/images/imagesGalery/hallstatt-3609863_1280.jpg",
+      "alt": "Image 3",
+      "filters": ["playa"]
+    },
+    {
+      "src": "/public/assets/images/imagesGalery/istanbul-915076_1280.jpg",
+      "alt": "Image 3",
+      "filters": ["ciudad"]
+    },
+    {
+      "src": "/public/assets/images/imagesGalery/jordan-1846284_1280.jpg",
+      "alt": "Image 3",
+      "filters": ["montana"]
+    },
+    {
+      "src": "/public/assets/images/imagesGalery/town-7015699_960_720.jpg",
+      "alt": "Image 3",
+      "filters": ["bosque"]
+    },
+    {
+      "src": "/public/assets/images/imagesGalery/cable-car-8357177_1280.webp",
+      "alt": "Image 1",
+      "filters": ["playa"]
+    },
+    {
+      "src": "/public/assets/images/imagesGalery/camogli-4324509_1280.jpg",
+      "alt": "Image 2",
+      "filters": ["ciudad"]
+    },
+    {
+      "src": "/public/assets/images/imagesGalery/cathedral-6830526_1280.jpg",
+      "alt": "Image 3",
+      "filters": ["montana"]
+    },
+    {
+      "src": "/public/assets/images/imagesGalery/galata-4043037_1280.jpg",
+      "alt": "Image 3",
+      "filters": ["bosque"]
+    },
+    {
+      "src": "/public/assets/images/imagesGalery/hallstatt-3609863_1280.jpg",
+      "alt": "Image 3",
+      "filters": ["playa"]
+    },
+    {
+      "src": "/public/assets/images/imagesGalery/istanbul-915076_1280.jpg",
+      "alt": "Image 3",
+      "filters": ["ciudad"]
+    },
+    {
+      "src": "/public/assets/images/imagesGalery/jordan-1846284_1280.jpg",
+      "alt": "Image 3",
+      "filters": ["montana"]
+    },
+    {
+      "src": "/public/assets/images/imagesGalery/town-7015699_960_720.jpg",
+      "alt": "Image 3",
+      "filters": ["bosque"]
+    },
+    {
+      "src": "/public/assets/images/imagesGalery/cable-car-8357177_1280.webp",
+      "alt": "Image 1",
+      "filters": ["playa"]
+    },
+    {
+      "src": "/public/assets/images/imagesGalery/camogli-4324509_1280.jpg",
+      "alt": "Image 2",
+      "filters": ["ciudad"]
+    },
+    {
+      "src": "/public/assets/images/imagesGalery/cathedral-6830526_1280.jpg",
+      "alt": "Image 3",
+      "filters": ["montana"]
+    },
+    {
+      "src": "/public/assets/images/imagesGalery/galata-4043037_1280.jpg",
+      "alt": "Image 3",
+      "filters": ["bosque"]
+    },
+    {
+      "src": "/public/assets/images/imagesGalery/hallstatt-3609863_1280.jpg",
+      "alt": "Image 3",
+      "filters": ["playa"]
+    },
+    {
+      "src": "/public/assets/images/imagesGalery/istanbul-915076_1280.jpg",
+      "alt": "Image 3",
+      "filters": ["ciudad"]
+    },
+    {
+      "src": "/public/assets/images/imagesGalery/jordan-1846284_1280.jpg",
+      "alt": "Image 3",
+      "filters": ["montana"]
+    },
+    {
+      "src": "/public/assets/images/imagesGalery/town-7015699_960_720.jpg",
+      "alt": "Image 3",
+      "filters": ["bosque"]
+    },
+    {
+      "src": "/public/assets/images/imagesGalery/cable-car-8357177_1280.webp",
+      "alt": "Image 1",
+      "filters": ["playa"]
+    },
+    {
+      "src": "/public/assets/images/imagesGalery/camogli-4324509_1280.jpg",
+      "alt": "Image 2",
+      "filters": ["ciudad"]
+    },
+    {
+      "src": "/public/assets/images/imagesGalery/cathedral-6830526_1280.jpg",
+      "alt": "Image 3",
+      "filters": ["montana"]
+    },
+    {
+      "src": "/public/assets/images/imagesGalery/galata-4043037_1280.jpg",
+      "alt": "Image 3",
+      "filters": ["bosque"]
+    },
+    {
+      "src": "/public/assets/images/imagesGalery/hallstatt-3609863_1280.jpg",
+      "alt": "Image 3",
+      "filters": ["playa"]
+    },
+    {
+      "src": "/public/assets/images/imagesGalery/istanbul-915076_1280.jpg",
+      "alt": "Image 3",
+      "filters": ["ciudad"]
+    },
+    {
+      "src": "/public/assets/images/imagesGalery/jordan-1846284_1280.jpg",
+      "alt": "Image 3",
+      "filters": ["montana"]
+    },
+    {
+      "src": "/public/assets/images/imagesGalery/town-7015699_960_720.jpg",
+      "alt": "Image 3",
+      "filters": ["bosque"]
+    },
+    {
+      "src": "/public/assets/images/imagesGalery/cable-car-8357177_1280.webp",
+      "alt": "Image 1",
+      "filters": ["playa"]
+    },
+    {
+      "src": "/public/assets/images/imagesGalery/camogli-4324509_1280.jpg",
+      "alt": "Image 2",
+      "filters": ["ciudad"]
+    },
+    {
+      "src": "/public/assets/images/imagesGalery/cathedral-6830526_1280.jpg",
+      "alt": "Image 3",
+      "filters": ["montana"]
+    },
+    {
+      "src": "/public/assets/images/imagesGalery/galata-4043037_1280.jpg",
+      "alt": "Image 3",
+      "filters": ["bosque"]
+    },
+    {
+      "src": "/public/assets/images/imagesGalery/hallstatt-3609863_1280.jpg",
+      "alt": "Image 3",
+      "filters": ["playa"]
+    },
+    {
+      "src": "/public/assets/images/imagesGalery/istanbul-915076_1280.jpg",
+      "alt": "Image 3",
+      "filters": ["ciudad"]
+    },
+    {
+      "src": "/public/assets/images/imagesGalery/jordan-1846284_1280.jpg",
+      "alt": "Image 3",
+      "filters": ["montana"]
+    },
+    {
+      "src": "/public/assets/images/imagesGalery/town-7015699_960_720.jpg",
+      "alt": "Image 3",
+      "filters": ["bosque"]
+    },
+    {
+      "src": "/public/assets/images/imagesGalery/cable-car-8357177_1280.webp",
+      "alt": "Image 1",
+      "filters": ["playa"]
+    },
+    {
+      "src": "/public/assets/images/imagesGalery/camogli-4324509_1280.jpg",
+      "alt": "Image 2",
+      "filters": ["ciudad"]
+    },
+    {
+      "src": "/public/assets/images/imagesGalery/cathedral-6830526_1280.jpg",
+      "alt": "Image 3",
+      "filters": ["montana"]
+    },
+    {
+      "src": "/public/assets/images/imagesGalery/galata-4043037_1280.jpg",
+      "alt": "Image 3",
+      "filters": ["bosque"]
+    },
+    {
+      "src": "/public/assets/images/imagesGalery/hallstatt-3609863_1280.jpg",
+      "alt": "Image 3",
+      "filters": ["playa"]
+    },
+    {
+      "src": "/public/assets/images/imagesGalery/istanbul-915076_1280.jpg",
+      "alt": "Image 3",
+      "filters": ["ciudad"]
+    },
+    {
+      "src": "/public/assets/images/imagesGalery/jordan-1846284_1280.jpg",
+      "alt": "Image 3",
+      "filters": ["montana"]
+    },
+    {
+      "src": "/public/assets/images/imagesGalery/town-7015699_960_720.jpg",
+      "alt": "Image 3",
+      "filters": ["bosque"]
+    },
+    {
+      "src": "/public/assets/images/imagesGalery/cable-car-8357177_1280.webp",
+      "alt": "Image 1",
+      "filters": ["playa"]
+    },
+    {
+      "src": "/public/assets/images/imagesGalery/camogli-4324509_1280.jpg",
+      "alt": "Image 2",
+      "filters": ["ciudad"]
+    },
+    {
+      "src": "/public/assets/images/imagesGalery/cathedral-6830526_1280.jpg",
+      "alt": "Image 3",
+      "filters": ["montana"]
+    },
+    {
+      "src": "/public/assets/images/imagesGalery/galata-4043037_1280.jpg",
+      "alt": "Image 3",
+      "filters": ["bosque"]
+    },
+    {
+      "src": "/public/assets/images/imagesGalery/hallstatt-3609863_1280.jpg",
+      "alt": "Image 3",
+      "filters": ["playa"]
+    },
+    {
+      "src": "/public/assets/images/imagesGalery/istanbul-915076_1280.jpg",
+      "alt": "Image 3",
+      "filters": ["ciudad"]
+    },
+    {
+      "src": "/public/assets/images/imagesGalery/jordan-1846284_1280.jpg",
+      "alt": "Image 3",
+      "filters": ["montana"]
+    },
+    {
+      "src": "/public/assets/images/imagesGalery/town-7015699_960_720.jpg",
+      "alt": "Image 3",
+      "filters": ["bosque"]
+    }
+  ]
+}

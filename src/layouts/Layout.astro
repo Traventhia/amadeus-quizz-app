@@ -6,9 +6,7 @@ interface LayoutProps {
 const { title } = Astro.props;
 
 import NavBar from '@components/Layouts/NavBar.astro';
-import Slider from '@components/Layouts/Slider.astro';
-import Paquete from '@components/promociones/paquete.astro';
-
+import UpTopPage from '@components/buttons/UpTopPage.astro';
 ---
 
 <!doctype html>
@@ -17,10 +15,18 @@ import Paquete from '@components/promociones/paquete.astro';
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
+    <link rel="shortcut icon" href="/images/favicon-32x32.png" type="image/x-icon" />
   </head>
   <body>
     <NavBar />
-    <Slider />
-    <Paquete />
+    <slot />
+    <UpTopPage />
+    <!-- Queda pendiente el Footer debido a algunas incompatibilidades -->
   </body>
 </html>
+
+<style>
+  body {
+    position: relative;
+  }
+</style>
