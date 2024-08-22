@@ -1,9 +1,9 @@
 * {
-    list-style: none;
+  list-style: none;
 }
 
 .container {
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 .footer {
@@ -20,21 +20,21 @@
 }
 
 .footer-links {
-    width: 25%;
-    padding: 0px 15;
-    
+  width: 25%;
+  padding: 0px 15;
+
 }
 
 .footer-links h4:hover {
-    font-size: 20px;
-    color: #515a5a;
-    margin-bottom: 25px;
-    font-weight: 500;
-    border-bottom: 2px solid #3509d1;
-    padding-bottom: 10px;
-    display: inline-block;    
-    width: 25%;
-    padding: 0px 15;
+  font-size: 20px;
+  color: #515a5a;
+  margin-bottom: 25px;
+  font-weight: 500;
+  border-bottom: 2px solid #3509d1;
+  padding-bottom: 10px;
+  display: inline-block;
+  width: 25%;
+  padding: 0px 15;
 }
 
 .footer-links ul li a {
@@ -48,7 +48,7 @@
 }
 
 .footer-links ul li a:hover {
-  background-color: #aed6f1;
+  scale: 1.05;
   border-color: #aed6f1;
   color: #2e86c1;
   padding-left: 6px;
@@ -86,12 +86,17 @@
   background-color: #fdfefe;
   font-family: Arial, Helvetica, sans-serif;
   padding: 80px 0;
-  }
+}
 
-  button {
-    background-color: #4caf50;
-  } /* Green */
-  button:hover {
-    background-color: #169e1d;
-  }
+button {
+  background-color: #4caf50;
+}
+
+/* Green */
+button:hover {
+  background-color: #169e1d;
+}
+
+.copy {
+  margin-left: 10px;
 }
