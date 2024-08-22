@@ -2,12 +2,12 @@
 import './CardInformation.scss'
 
 interface Props {
-    src: string;
+    src: any;
     alt: string;
-    place: string;
-    location: string;
-    climate: string;
-    description: string;
+    place: any;
+    location: any;
+    climate: any;
+    description: any;
     href: string;
 }
 
@@ -21,7 +21,7 @@ const { src, alt, place, location, climate, description, href } = Astro.props;
         <div class="climate">{climate}</div>
         <div class="description">{description}</div>
         <div class="buttons">
-            <button>SEE MORE</button>
+            <!-- <button>SEE MORE</button> -->
             <!-- <button><a href={href}>SUBSCRIBE</a></button> -->
         </div>
     </div>
