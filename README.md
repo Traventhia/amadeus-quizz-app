@@ -1,4 +1,4 @@
-# 🧠 Traventhi Game
+# 🧠 Traventhia Game
 Este proyecto se basa en una propuesta de reto proporcionada por Amadeus, en la que nos encargamos de resolver un problema basado en la recopilación de datos de usuarios utilizando estrategias libres.
 
 ![image](https://github.com/user-attachments/assets/b2964015-d58b-4909-98a0-fe31f5081a5a)
