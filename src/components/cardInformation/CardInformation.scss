@@ -11,11 +11,11 @@
     position: absolute;
     top: 15%;
     max-width: 50%;
-    left: 20%;
+    left: 15%;
     padding-right: 10%;
     box-sizing: border-box;
     color: white;
-    text-shadow: 0 5px 10px #0004;
+    text-shadow: 0 5px 10px rgba(0, 0, 0, 0.2666666667);
 
     & .place {
         font-size: 2rem;
@@ -23,17 +23,27 @@
         font-weight: 800;
     }
 
-    & .location, .climate {
+    & .location,
+    .climate {
         font-weight: 900;
         font-size: 3rem;
     }
 
+    & .place {
+        text-transform: capitalize;
+
+    }
+
     & .description {
         font-size: 2rem;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-weight: 300;
+        font-size: 26px;
     }
 
     .location {
         color: $secondary-blue;
+        text-transform: uppercase;
     }
 
     .buttons {
@@ -65,6 +75,3 @@
         }
     }
 }
-
-
-

@@ -1,3 +1,7 @@
+// Global styles
+@import '../../styles/globales';
+
+
 // Card 
 
 .card__image {
@@ -7,11 +11,19 @@
     border-radius: 20px;
 }
 
+.card__container {
+    height: 100%;
+}
+
 .card__text {
     margin: -80px 25px 0;
-    color: white;
+    color: black; 
 
     & .item__title {
-        font-weight: bold;
+        font-weight: 900;
+    }
+
+    & .item__description {
+        font-weight: 700;
     }
 }

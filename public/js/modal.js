@@ -5,6 +5,28 @@ let questions = [];
 let answers = [];
 let currentQuestionIndex = 0;
 
+let destinationData = [];
+
+// Cargar datos desde el archivo JSON
+fetch('public/js/destinationData.json')
+  .then((response) => response.json())
+  .then((data) => {
+    destinationData = data;
+  })
+  .catch((error) => {
+    console.error('Error al cargar el archivo JSON:', error);
+  });
+
+// Función para normalizar cadenas
+function normalizeString(str) {
+  return str
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .trim()
+    .replace(/\s+/g, ' ');
+}
+
 function resetAnswers() {
   currentQuestionIndex = 0;
   answers = [];
@@ -86,13 +108,57 @@ function showQuestionModal(selectedQuestion, callback) {
 
 function saveAnswer(selectedIndex, questionObj) {
   const answer = {
-    question: questionObj.question,
+    questionId: questionObj.id,
     selectedOption: questionObj.options[selectedIndex],
   };
   answers.push(answer);
 
-  // TODO: Manejar las respuestas guardadas
   if (currentQuestionIndex === questions.length - 1) {
-    console.log(JSON.stringify(answers, null, 2));
+    getRecommendations(); // Generar las recomendaciones basadas en las respuestas
+    showRecommendationsModal(); // Mostrar el modal con las recomendaciones
+    // console.log(JSON.stringify(answers)); //Respuestas del usuario
   }
+}
+
+function showRecommendationsModal() {
+  const modal = document.getElementById('recommendationsModal');
+  modal.style.display = 'flex';
+}
+
+function getRecommendations() {
+  // Mapeo de las respuestas en un objeto para un acceso más fácil
+  const answersMap = answers.reduce((map, answer) => {
+    map[answer.questionId] = answer.selectedOption;
+    return map;
+  }, {});
+
+  const destinationType = normalizeString(answersMap['1'] || ''); // '1' es el id de la pregunta sobre el tipo de entorno
+  const climate = normalizeString(answersMap['3'] || ''); // '3' es el id de la pregunta sobre el clima
+  const activity = normalizeString(answersMap['5'] || ''); // '5' es el id de la pregunta sobre las actividades
+  const accommodation = normalizeString(answersMap['7'] || ''); // '7' es el id de la pregunta sobre el alojamiento
+  const duration = normalizeString(answersMap['9'] || ''); // '9' es el id de la pregunta sobre la duración
+  const age = normalizeString(answersMap['11'] || ''); // '11' es el id de la pregunta sobre la edad
+
+  // Buscar la combinación de respuestas y normalizar los datos JSON
+  const result = destinationData.find(
+    (dest) =>
+      normalizeString(dest.preferenceDestination) === destinationType &&
+      normalizeString(dest.climate) === climate &&
+      normalizeString(dest.activity) === activity &&
+      normalizeString(dest.accommodation) === accommodation &&
+      normalizeString(dest.duration) === duration &&
+      normalizeString(dest.age) === age,
+  );
+
+  const nationalDestination = result ? result.national : 'Bora Bora, Polinesia Francesa';
+  const internationalDestination = result
+    ? result.international
+    : 'Dubái, Emiratos Árabes';
+
+  document.getElementById(
+    'national-destination',
+  ).textContent = `Destino Nacional: ${nationalDestination}`;
+  document.getElementById(
+    'international-destination',
+  ).textContent = `Destino Internacional: ${internationalDestination}`;
 }
