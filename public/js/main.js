@@ -19,7 +19,7 @@ document.getElementById('replayButton').addEventListener('click', () => {
 
 getQuestions(dataApi, (res) => {
   questions = res;
-  console.log(res);
+  // console.log(res);
   setTimeout(() => {
     startGame();
   }, 1000);

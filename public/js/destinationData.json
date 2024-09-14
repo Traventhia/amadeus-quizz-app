@@ -1,0 +1,193 @@
+[
+    {
+      "preferenceDestination": "Playa",
+      "climate": "Caluroso",
+      "activity": "Relax y bienestar",
+      "accommodation": "Hotel de lujo",
+      "duration": "Una a dos semanas",
+      "age": "Menos de 30 años",
+      "national": "Playa del Carmen, México",
+      "international": "Santorini, Grecia"
+    },
+    {
+      "preferenceDestination": "Playa",
+      "climate": "Caluroso",
+      "activity": "Cultura y museos",
+      "accommodation": "Airbnb o apartamento",
+      "duration": "Menos de una semana",
+      "age": "Menos de 30 años",
+      "national": "Cartagena, Colombia",
+      "international": "Barcelona, España"
+    },
+    {
+      "preferenceDestination": "Playa",
+      "climate": "Templado",
+      "activity": "Cultura y museos",
+      "accommodation": "Hotel de lujo",
+      "duration": "Una a dos semanas",
+      "age": "30-50 años",
+      "national": "Rio de Janeiro, Brasil",
+      "international": "Lisboa, Portugal"
+    },
+    {
+        "preferenceDestination": "Montaña",
+        "climate": "Frío",
+        "activity": "Deportes y aventuras",
+        "accommodation": "Albergue",
+        "duration": "Una a dos semanas",
+        "age": "Menos de 30 años",
+        "national": "Bariloche, Argentina",
+        "international": "Interlaken, Suiza"
+      },
+      {
+        "preferenceDestination": "Montaña",
+        "climate": "Templado",
+        "activity": "Cultura y museos",
+        "accommodation": "Airbnb o apartamento",
+        "duration": "Una a dos semanas",
+        "age": "Más de 50 años",
+        "national": "Cusco, Perú",
+        "international": "Granada, España"
+      },
+    {
+        "preferenceDestination": "Montaña",
+        "climate": "Frío",
+        "activity": "Deportes y aventuras",
+        "accommodation": "Hotel de lujo",
+        "duration": "Una a dos semanas",
+        "age": "30-50 años",
+        "national": "Banff, Canadá",
+        "international": "Zermatt, Suiza"
+      },
+      {
+        "preferenceDestination": "Ciudad",
+        "climate": "Templado",
+        "activity": "Cultura y museos",
+        "accommodation": "Hotel de lujo",
+        "duration": "Una a dos semanas",
+        "age": "Más de 50 años",
+        "national": "Nueva York, EE.UU.",
+        "international": "París, Francia"
+      },
+      {
+        "preferenceDestination": "Ciudad",
+        "climate": "Templado",
+        "activity": "Relax y bienestar",
+        "accommodation": "Airbnb o apartamento",
+        "duration": "Menos de una semana",
+        "age": "Menos de 30 años",
+        "national": "Miami, EE.UU.",
+        "international": "Viena, Austria"
+      },
+      {
+        "preferenceDestination": "Ciudad",
+        "climate": "Frío",
+        "activity": "Cultura y museos",
+        "accommodation": "Hotel de lujo",
+        "duration": "Una a dos semanas",
+        "age": "30-50 años",
+        "national": "Toronto, Canadá",
+        "international": "Berlín, Alemania"
+      },
+      {
+        "preferenceDestination": "Playa",
+        "climate": "Caluroso",
+        "activity": "Deportes y aventuras",
+        "accommodation": "Hostal",
+        "duration": "Una a dos semanas",
+        "age": "Menos de 30 años",
+        "national": "Tulum, México",
+        "international": "Ibiza, España"
+      },
+      {
+        "preferenceDestination": "Montaña",
+        "climate": "Frío",
+        "activity": "Cultura y museos",
+        "accommodation": "Airbnb o apartamento",
+        "duration": "Una a dos semanas",
+        "age": "Más de 50 años",
+        "national": "Ushuaia, Argentina",
+        "international": "Reykjavik, Islandia"
+      },
+      {
+        "preferenceDestination": "Playa",
+        "climate": "Templado",
+        "activity": "Relax y bienestar",
+        "accommodation": "Airbnb o apartamento",
+        "duration": "Más de dos semanas",
+        "age": "Más de 50 años",
+        "national": "Punta Cana, República Dominicana",
+        "international": "Algarve, Portugal"
+      },
+      {
+        "preferenceDestination": "Ciudad",
+        "climate": "Templado",
+        "activity": "Deportes y aventuras",
+        "accommodation": "Hotel de lujo",
+        "duration": "Menos de una semana",
+        "age": "30-50 años",
+        "national": "Chicago, EE.UU.",
+        "international": "Londres, Reino Unido"
+      },
+      {
+        "preferenceDestination": "Playa",
+        "climate": "Templado",
+        "activity": "Cultura y museos",
+        "accommodation": "Albergue",
+        "duration": "Una a dos semanas",
+        "age": "Menos de 30 años",
+        "national": "San Juan, Puerto Rico",
+        "international": "Niza, Francia"
+      },
+      {
+      "preferenceDestination": "Montaña",
+      "climate": "Templado",
+      "activity": "Deportes y aventuras",
+      "accommodation": "Airbnb o apartamento",
+      "duration": "Más de dos semanas",
+      "age": "Menos de 30 años",
+      "national": "Machu Picchu, Perú",
+      "international": "Chamonix, Francia"
+    },
+    {
+      "preferenceDestination": "Ciudad",
+      "climate": "Caluroso",
+      "activity": "Cultura y museos",
+      "accommodation": "Hotel de lujo",
+      "duration": "Una a dos semanas",
+      "age": "Más de 50 años",
+      "national": "Los Ángeles, EE.UU.",
+      "international": "Roma, Italia"
+    },
+    {
+        "preferenceDestination": "Playa",
+        "climate": "Caluroso",
+        "activity": "Cultura y museos",
+        "accommodation": "Hotel de lujo",
+        "duration": "Una a dos semanas",
+        "age": "30-50 años",
+        "national": "Honolulu, Hawái",
+        "international": "Malta"
+      },
+      {
+      "preferenceDestination": "Montaña",
+      "climate": "Frío",
+      "activity": "Relax y bienestar",
+      "accommodation": "Airbnb o apartamento",
+      "duration": "Una a dos semanas",
+      "age": "Más de 50 años",
+      "national": "Aspen, EE.UU.",
+      "international": "Innsbruck, Austria"
+    },
+    {
+      "preferenceDestination": "Ciudad",
+      "climate": "Templado",
+      "activity": "Cultura y museos",
+      "accommodation": "Albergue",
+      "duration": "Una a dos semanas",
+      "age": "30-50 años",
+      "national": "Ciudad de México, México",
+      "international": "Madrid, España"
+    }
+  ]
+  
