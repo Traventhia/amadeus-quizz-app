@@ -1,0 +1,20 @@
+---
+import './paquetes.scss'
+
+interface Props {
+    title: string,
+    description: string,
+    src: string
+}
+
+const { title, description, src } = Astro.props;
+---
+
+<div class="cardpromo">
+    <img src={src} alt={title} class="card-image" />
+    <div class="card-overlay">
+        <h2 class="card-title">{title}</h2>
+        <p class="card-description">{description}</p>
+        <a href="#" class="card-button">Explorar</a>
+    </div>
+</div>

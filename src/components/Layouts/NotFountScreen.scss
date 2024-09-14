@@ -12,33 +12,391 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-}
 
-.contain__text {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
-}
 
-.contain__text h1 {
-    margin: 0;
-}
+    .contain__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        text-align: center;
+    }
 
-.contain__text h3 {
-    margin: 8px;
-}
+    .contain__text h1 span,
+    .contain__text h3 span {
+        display: inline-block;
+        animation: wave 1.5s ease-in-out infinite;
+    }
 
-.contain__text h1,
-.contain__text h3 {
-    animation: blink 1s step-start infinite;
+    @keyframes wave {
+
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+
+    // Delays h1
+    .contain__text h1 span:nth-child(1) {
+        animation-delay: 0s;
+    }
+
+    .contain__text h1 span:nth-child(2) {
+        animation-delay: 0.1s;
+    }
+
+    .contain__text h1 span:nth-child(3) {
+        animation-delay: 0.2s;
+    }
+
+    .contain__text h1 span:nth-child(4) {
+        animation-delay: 0.3s;
+    }
+
+    .contain__text h1 span:nth-child(5) {
+        animation-delay: 0.4s;
+    }
+
+    .contain__text h1 span:nth-child(6) {
+        animation-delay: 0.5s;
+    }
+
+    .contain__text h1 span:nth-child(7) {
+        animation-delay: 0.6s;
+    }
+
+    .contain__text h1 span:nth-child(8) {
+        animation-delay: 0.7s;
+    }
+
+    .contain__text h1 span:nth-child(9) {
+        animation-delay: 0.8s;
+    }
+
+    .contain__text h1 span:nth-child(10) {
+        animation-delay: 0.9s;
+    }
+
+    .contain__text h1 span:nth-child(11) {
+        animation-delay: 1s;
+    }
+
+    .contain__text h1 span:nth-child(12) {
+        animation-delay: 1.2s;
+    }
+
+    .contain__text h1 span:nth-child(13) {
+        animation-delay: 1.3s;
+    }
+
+    .contain__text h1 span:nth-child(14) {
+        animation-delay: 1.4s;
+    }
+
+    .contain__text h1 span:nth-child(15) {
+        animation-delay: 1.5s;
+    }
+
+    .contain__text h1 span:nth-child(16) {
+        animation-delay: 1.6s;
+    }
+
+    .contain__text h1 span:nth-child(17) {
+        animation-delay: 1.7s;
+    }
+
+    .contain__text h1 span:nth-child(18) {
+        animation-delay: 1.8s;
+    }
+
+    // Delays h3
+    .contain__text h3 span:nth-child(1) {
+        animation-delay: 0s;
+    }
+
+    .contain__text h3 span:nth-child(2) {
+        animation-delay: 0.1s;
+    }
+
+    .contain__text h3 span:nth-child(3) {
+        animation-delay: 0.2s;
+    }
+
+    .contain__text h3 span:nth-child(4) {
+        animation-delay: 0.3s;
+    }
+
+    .contain__text h3 span:nth-child(5) {
+        animation-delay: 0.4s;
+    }
+
+    .contain__text h3 span:nth-child(6) {
+        animation-delay: 0.5s;
+    }
+
+    .contain__text h3 span:nth-child(7) {
+        animation-delay: 0.6s;
+    }
+
+    .contain__text h3 span:nth-child(8) {
+        animation-delay: 0.7s;
+    }
+
+    .contain__text h3 span:nth-child(9) {
+        animation-delay: 0.8s;
+    }
+
+    .contain__text h3 span:nth-child(10) {
+        animation-delay: 0.9s;
+    }
+
+    .contain__text h3 span:nth-child(11) {
+        animation-delay: 1s;
+    }
+
+    .contain__text h3 span:nth-child(12) {
+        animation-delay: 1.2s;
+    }
+
+    .contain__text h3 span:nth-child(13) {
+        animation-delay: 1.3s;
+    }
+
+    .contain__text h3 span:nth-child(14) {
+        animation-delay: 1.4s;
+    }
+
+    .contain__text h3 span:nth-child(15) {
+        animation-delay: 1.5s;
+    }
+
+    .contain__text h3 span:nth-child(16) {
+        animation-delay: 1.6s;
+    }
+
+    .contain__text h3 span:nth-child(17) {
+        animation-delay: 1.7s;
+    }
+
+    .contain__text h3 span:nth-child(18) {
+        animation-delay: 1.8s;
+    }
+
+    .contain__text h3 span:nth-child(19) {
+        animation-delay: 1.9s;
+    }
+
+    .contain__text h3 span:nth-child(20) {
+        animation-delay: 2s;
+    }
+
+    .contain__text h3 span:nth-child(21) {
+        animation-delay: 2.1s;
+    }
+
+    .contain__text h3 span:nth-child(22) {
+        animation-delay: 2.2s;
+    }
+
+    .contain__text h3 span:nth-child(23) {
+        animation-delay: 2.3s;
+    }
+
+    .contain__text h3 span:nth-child(24) {
+        animation-delay: 2.4s;
+    }
+
+    .contain__text h3 span:nth-child(25) {
+        animation-delay: 2.5s;
+    }
+
+    .contain__text h3 span:nth-child(26) {
+        animation-delay: 2.6s;
+    }
+
+    .contain__text h3 span:nth-child(27) {
+        animation-delay: 2.7s;
+    }
+
+    .contain__text h3 span:nth-child(28) {
+        animation-delay: 2.8s;
+    }
+
+    .contain__text h3 span:nth-child(29) {
+        animation-delay: 2.9s;
+    }
+
+    .contain__text h3 span:nth-child(30) {
+        animation-delay: 3s;
+    }
+
+    .contain__text h3 span:nth-child(31) {
+        animation-delay: 3.1s;
+    }
+
+    .contain__text h3 span:nth-child(32) {
+        animation-delay: 3.2s;
+    }
+
+    .contain__text h3 span:nth-child(33) {
+        animation-delay: 3.3s;
+    }
+
+    .contain__text h3 span:nth-child(34) {
+        animation-delay: 3.4s;
+    }
+
+    .contain__text h3 span:nth-child(35) {
+        animation-delay: 3.5s;
+    }
+
+    .contain__text h3 span:nth-child(36) {
+        animation-delay: 3.6s;
+    }
+
+    .contain__text h3 span:nth-child(37) {
+        animation-delay: 3.7s;
+    }
+
+    .contain__text h3 span:nth-child(38) {
+        animation-delay: 3.8s;
+    }
+
+    .contain__text h3 span:nth-child(39) {
+        animation-delay: 3.9s;
+    }
+
+    .contain__text h3 span:nth-child(40) {
+        animation-delay: 4s;
+    }
+
+    .contain__text h3 span:nth-child(41) {
+        animation-delay: 4.1s;
+    }
+
+    .contain__text h3 span:nth-child(42) {
+        animation-delay: 4.2s;
+    }
+
+    .contain__text h3 span:nth-child(43) {
+        animation-delay: 4.3s;
+    }
+
+    .contain__text h3 span:nth-child(44) {
+        animation-delay: 4.4s;
+    }
+
+    .contain__text h3 span:nth-child(45) {
+        animation-delay: 4.5s;
+    }
+
+    .contain__text h3 span:nth-child(46) {
+        animation-delay: 4.6s;
+    }
+
+    .contain__text h3 span:nth-child(47) {
+        animation-delay: 4.7s;
+    }
+
+    .contain__text h3 span:nth-child(48) {
+        animation-delay: 4.8s;
+    }
+
+    .contain__text h3 span:nth-child(49) {
+        animation-delay: 4.9s;
+    }
+
+    .contain__text h3 span:nth-child(50) {
+        animation-delay: 5s;
+    }
+
+    .contain__text h3 span:nth-child(51) {
+        animation-delay: 5.1s;
+    }
+
+    .contain__text h3 span:nth-child(52) {
+        animation-delay: 5.2s;
+    }
+
+    .contain__text h3 span:nth-child(53) {
+        animation-delay: 5.3s;
+    }
+
+    .contain__text h3 span:nth-child(54) {
+        animation-delay: 5.4s;
+    }
+
+    .contain__text h3 span:nth-child(55) {
+        animation-delay: 5.5s;
+    }
+
+    .contain__text h3 span:nth-child(56) {
+        animation-delay: 5.6s;
+    }
+
+    .contain__text h3 span:nth-child(57) {
+        animation-delay: 5.7s;
+    }
+
+    .contain__text h3 span:nth-child(58) {
+        animation-delay: 5.8s;
+    }
+
+    .contain__text h3 span:nth-child(59) {
+        animation-delay: 5.9s;
+    }
+
+    .contain__text h3 span:nth-child(60) {
+        animation-delay: 6s;
+    }
+
+    .contain__text h3 span:nth-child(61) {
+        animation-delay: 6.1s;
+    }
+
+    .contain__text h3 span:nth-child(62) {
+        animation-delay: 6.2s;
+    }
+
+    .contain__text h3 span:nth-child(63) {
+        animation-delay: 6.3s;
+    }
+
+    .contain__text h3 span:nth-child(64) {
+        animation-delay: 6.4s;
+    }
+
+    .contain__text h3 span:nth-child(65) {
+        animation-delay: 6.5s;
+    }
+
+    .contain__text h3 span:nth-child(66) {
+        animation-delay: 6.6s;
+    }
+
+    .contain__text h3 span:nth-child(67) {
+        animation-delay: 6.7s;
+    }
+
+    .contain__text h3 span:nth-child(68) {
+        animation-delay: 6.8s;
+    }
+
+    .contain__text h3 span:nth-child(69) {
+        animation-delay: 6.9s;
+    }
 }
 
 @keyframes blink {
-    0%, 100% {
+
+    0%,
+    100% {
         opacity: 1;
     }
 

@@ -1,9 +1,7 @@
 // Global styles
 @import '../../styles/globales';
 
-
 // Card 
-
 .card__image {
     width: 100%;
     height: 100%;
@@ -13,17 +11,25 @@
 
 .card__container {
     height: 100%;
-}
+    border-radius: 20px;
 
-.card__text {
-    margin: -80px 25px 0;
-    color: black; 
+    & .card__text {
+        margin: -75px 25px 0;
+        text-shadow: 0 5px 10px rgba(0, 0, 0, 0.517);
+        backdrop-filter: blur(3px);
+        border-radius: 10px;
+        padding: 6px 2px 4px 2px;
+        text-align: center;
+        color: white;
 
-    & .item__title {
-        font-weight: 900;
-    }
+        & .item__title {
+            margin: 0;
+            font-weight: 900;
+        }
 
-    & .item__description {
-        font-weight: 700;
+        & .item__description {
+            margin: 0;
+            font-weight: 700;
+        }
     }
 }

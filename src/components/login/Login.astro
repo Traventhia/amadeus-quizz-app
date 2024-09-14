@@ -1,0 +1,78 @@
+---
+import './Login.scss';
+---
+
+<div class="container" id="container">
+  <div class="form__container sign__up">
+    <form>
+      <h1>Create Account</h1>
+
+      <div class="social__icons">
+        <a href="#" class="icon"><i class="fab fa-google-plus-g"></i></a>
+        <a href="#" class="icon"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="icon"><i class="fab fa-github"></i></a>
+        <a href="#" class="icon"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+
+      <span>Or use your email for registration</span>
+      <input type="text" placeholder="Name" />
+      <input type="email" placeholder="Email" />
+      <input type="password" placeholder="Password" />
+      <button>Sign Up</button>
+    </form>
+  </div>
+
+  <div class="form__container sign__in">
+    <form>
+      <h1>Login</h1>
+
+      <div class="social__icons">
+        <a href="#" class="icon"><i class="fab fa-google-plus-g"></i></a>
+        <a href="#" class="icon"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="icon"><i class="fab fa-github"></i></a>
+        <a href="#" class="icon"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+
+      <span>Or use your email and password</span>
+
+      <input type="email" placeholder="Email" />
+      <input type="password" placeholder="Password" />
+      <a href="#"> Forgot your password? </a>
+      <button>Sign In</button>
+    </form>
+  </div>
+
+  <div class="toggle__container">
+    <div class="toggle">
+      <div class="toggle__panel toggle__left">
+        <h1>Hello, Friend!</h1>
+        <p>Enter your personal details to use all of site features</p>
+        <button class="hidden" id="login">Sign In</button>
+      </div>
+
+      <div class="toggle__panel toggle__right">
+        <h1>Welcome Back!</h1>
+        <p>Register with your personal details to use all of site features</p>
+        <button class="hidden" id="register">Sign Up</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const container = document.getElementById('container');
+  const registerBtn = document.getElementById('register');
+  const loginBtn = document.getElementById('login');
+
+  if (registerBtn) {
+    registerBtn.addEventListener('click', () => {
+        if (container) container.classList.add("active");
+    });
+  }
+
+  if (loginBtn) {
+    loginBtn.addEventListener('click', () => {
+        if (container) container.classList.remove("active");
+    });
+  }
+</script>

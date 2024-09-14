@@ -1,0 +1,255 @@
+@import '../../styles/globales';
+
+:root {
+    --primary-color: #3742fa;
+    --white-color: #ffffff;
+    --light-color: #ced6e0;
+    --dark-color: #2f3542;
+    --box-shadow: rgba(0, 0, 2 / 35%) 0px 20px 30px -10px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a,
+button,
+div[role="button"] {
+    -webkit-tap-highlight-color: transparent;
+}
+
+ul {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-weight: 500;
+    line-height: normal;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-size: 1rem;
+}
+
+.site {
+    background-color: var(--light-color);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 1100px;
+    width: 100%;
+    padding: 0 30px;
+    margin: 0 auto;
+}
+
+.testi {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.testi .head {
+    text-align: center;
+    margin-bottom: 60px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.testi .head h1 {
+    font-size: 34px;
+    font-weight: 800;
+}
+
+.testi .wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 60px;
+    padding: 30px 0 0 0;
+}
+
+/* let set thumbnail first */
+.testi .thumbnail {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.testi .thumbnail img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transform: scale(2);
+    transition: transform .5s;
+}
+
+.testi .swiper-slide-active .thumbnail img {
+    transform: scale(1);
+}
+
+.testi .thumbnail::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: calc(100% + 30px);
+    height: calc(100% + 10px);
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    z-index: -1;
+    box-shadow: var(--box-shadow);
+    transition: border-radius .5s .3s;
+}
+
+.testi .swiper-slide-active .thumbnail::before {
+    border-radius: 33% 67% 50% 50% / 50% 14% 86% 50%;
+}
+
+
+.testi .aside {
+    padding: 15px 100px 0 100px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+}
+
+.testi .aside > p {
+    font-family: 'Source Sans Pro', sans-serif;
+    position: relative;
+    font-size: 1.3rem;
+    line-height: normal;
+    margin-bottom: 30px;
+    opacity: 0;
+    transform: translateX(10%);
+    transition: transform 1s, opacity 2s;
+}
+
+.testi .swiper-slide-active .aside > p {
+    opacity: 1;
+    transform: translateX(0%);
+}
+
+.testi .aside>p::before,
+.testi .aside>p::after {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 80px;
+    font-weight: 800;
+    line-height: 1;
+    position: absolute;
+    color: black;
+    height: 40px;
+    z-index: -1;
+}
+
+.testi .aside>p::before {
+    content: open-quote;
+    top: -55px;
+    left: 10px;
+}
+
+.testi .aside>p::after {
+    content: close-quote;
+    bottom: -40px;
+    right: 50px;
+}
+
+.testi .aside .name {
+    position: relative;
+    width: fit-content;
+    line-height: 1;
+    opacity: 0;
+    transform: translateX(30px);
+    transition: transform 1s .2s, opacity 2s .3s;
+}
+
+.testi .swiper-slide-active .aside .name {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.testi .aside .name h4 {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--primary-color);
+    opacity: .8;
+}
+
+/* slider */
+.testi :is(.swiper-button-next, .swiper-button-prev) {
+    background-color: $primary-blue;
+    top: 35%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: background-color .3s;
+    box-shadow: var(--box-shadow);
+}
+
+.testi :is(.swiper-button-next, .swiper-button-prev):hover {
+    background-color: var(--primary-color);
+}
+
+.testi :is(.swiper-button-next, .swiper-button-prev)::after {
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--white-color);
+}
+
+.testi .swiper-pagination {
+    position: relative;
+}
+
+.testi .swiper-pagination span {
+    background-color: var(--white-color);
+    transition: width .3s;
+    opacity: 1;
+}
+
+.testi .swiper-pagination span.swiper-pagination-bullet-active {
+    width: 26px;
+    border-radius: 4px;
+    background-color: var(--primary-color);
+}
+
+/* Media */
+@media screen and (max-width: 768px) {
+    .testi .wrapper {
+        flex-direction: row;
+        padding: 30px 100px;
+    }
+
+    .testi .thumbnail {
+        width: 200px;
+        height: 200px;
+    }
+
+    .testi :is(.swiper-button-next, .swiper-button-prev) {
+        top: 50%;
+    }
+
+    .testi .swiper-slide-active .name h4 {
+        transform: translateX(-50px);
+    }
+}

@@ -1,0 +1,103 @@
+---
+import './Testimonials.scss';
+
+const testimonials = [
+  {
+    img: '../../../public/images/testimonios/Image-1.jpg',
+    name: 'Daniel Malik',
+    alt: 'testimonio 1',
+    description:
+      'Gracias a la línea de viajes de Amadeus, pude cumplir mi sueño de visitar Europa. La experiencia fue increíble, desde la organización del itinerario hasta la atención al cliente. Cada detalle estuvo cuidado, y siempre me sentí acompañada durante el viaje. ¡No puedo esperar para planear mi próxima aventura con ellos!.',
+  },
+  {
+    img: '../../../public/images/testimonios/testimonio1.jpg',
+    name: 'Carla García',
+    alt: 'testimonio 2',
+    description:
+      'Viajar con Amadeus fue una experiencia inolvidable. Me ayudaron a planear unas vacaciones perfectas en las playas de Tailandia. Todo salió mejor de lo que esperaba, y el equipo siempre estuvo disponible para resolver cualquier duda. ¡Definitivamente volveré a viajar con ellos!.',
+  },
+  {
+    img: '../../../public/images/testimonios/testimonio2.jpeg',
+    name: 'Grabiel Espinoza',
+    alt: 'testimonio 3',
+    description:
+      'Quiero agradecer a Amadeus por hacer de mi viaje a París algo inolvidable. Desde el primer momento, todo fue fácil y sin complicaciones. La atención personalizada y la calidad del servicio superaron mis expectativas. ¡Gracias a Amadeus, descubrí el placer de viajar sin preocupaciones!.',
+  },
+];
+---
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+<div class="testimonials">
+  <div class="site" id="page">
+    <div class="container">
+      <div class="testi">
+        <div class="head">
+          <h1>Testimonials</h1>
+          <p>What our clients say about us</p>
+        </div>
+
+        <div class="body swiper">
+          <ul class="swiper-wrapper">
+            {
+              testimonials.map(
+                (testimonio) => (
+                  console.log(testimonio, 'testimonio'),
+                  (
+                    <li class="swiper-slide">
+                      <div class="wrapper">
+                        <div class="thumbnail">
+                          <img src={testimonio.img} alt={testimonio.alt} />
+                        </div>
+                        <div class="aside">
+                          <p>{testimonio.description}</p>
+                          <div class="name">
+                            <h4>{testimonio.name}</h4>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  )
+                ),
+              )
+            }
+          </ul>
+          <div class="swiper-pagination"></div>
+
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+  import Swiper from 'swiper';
+  import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const swiper = new Swiper('.swiper', {
+      modules: [Navigation, Pagination, Autoplay],
+      autoHeight: true,
+      loop: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  });
+</script>
