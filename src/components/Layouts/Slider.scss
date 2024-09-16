@@ -73,6 +73,7 @@
 
     // Thumbnail
     .thumbnail {
+        top: 60%;
         position: absolute;
         bottom: 100px;
         left: 60%;
@@ -100,7 +101,7 @@
     // Arrows
     .arrows {
         position: absolute;
-        top: 80%;
+        top: 85%;
         left: 26%;
         max-width: 30%;
         display: flex;

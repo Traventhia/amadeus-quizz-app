@@ -6,13 +6,15 @@ import './GaleryScreen.scss';
 import '../../../public/images.json'
 ---
 
+<title>Galeria</title>
+
 <div class="contain__galery">
     <div class="containt__text">
         <div class="title">
-            <h1>Galeria Amadus</h1>
+            <h1>Galeria Amadeus</h1>
         </div>
         <div class="subtitle">
-            <h3>Nuestros clientes también comparten su alegría con nosotros</h3>
+            <h3>Nuestros clientes tambien comparten su alegría con nosotros</h3>
         </div>
     </div>
 
@@ -54,7 +56,6 @@ import '../../../public/images.json'
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-    console.log('JavaScript is running');
 
     const filters = document.querySelectorAll<HTMLButtonElement>('.filters button');
     const imageContainer = document.querySelector<HTMLDivElement>('.images');

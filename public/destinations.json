@@ -1,52 +1,101 @@
 [
-    {
-        "name": "India",
-        "description": "es un país soberano situado en la región noroccidental de América del Sur. Se constituye en un Estado unitario, social y democrático de derecho, cuya forma de gobierno es presidencialista con dos cámaras legislativas. Su capital y ciudad más poblada es Bogotá.",
-        "img": "https://colombiavisible.com/wp-content/uploads/2022/01/shutterstock_1258073146-scaled-1-1024x683.jpg"
-    },
-    {
-        "name": "Panama",
-        "description": "es un país soberano situado en la región noroccidental de América del Sur. Se constituye en un Estado unitario, social y democrático de derecho, cuya forma de gobierno es presidencialista con dos cámaras legislativas. Su capital y ciudad más poblada es Bogotá.",
-        "img": "https://colombiavisible.com/wp-content/uploads/2022/06/Cano-Cristales-1024x576.jpg"
-    },
-    {
-        "name": "Venezuela",
-        "description": "es un país soberano situado en la región noroccidental de América del Sur. Se constituye en un Estado unitario, social y democrático de derecho, cuya forma de gobierno es presidencialista con dos cámaras legislativas. Su capital y ciudad más poblada es Bogotá.",
-        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSe31XMGQQLSxDdlPomfTfkHgvRpvkdJGhyg&s"
-    },
-    {
-        "name": "Paris",
-        "description": "es un país soberano situado en la región noroccidental de América del Sur. Se constituye en un Estado unitario, social y democrático de derecho, cuya forma de gobierno es presidencialista con dos cámaras legislativas. Su capital y ciudad más poblada es Bogotá.",
-        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTO_f9k45VD6cRDwJ7A7b0j8HvRx-jlEChuUg&s"
-    },
-    {
-        "name": "Republica dominicana",
-        "description": "es un país soberano situado en la región noroccidental de América del Sur. Se constituye en un Estado unitario, social y democrático de derecho, cuya forma de gobierno es presidencialista con dos cámaras legislativas. Su capital y ciudad más poblada es Bogotá.",
-        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvAZ58nHbGfqfJk0YIlFuyGzxrrewDCrNTPQ&s"
-    },
-    {
-        "name": "Alemania",
-        "description": "es un país soberano situado en la región noroccidental de América del Sur. Se constituye en un Estado unitario, social y democrático de derecho, cuya forma de gobierno es presidencialista con dos cámaras legislativas. Su capital y ciudad más poblada es Bogotá.",
-        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR30mjr9BHjrWq-mstIYFVnmCSCS5ZELfmFLA&s"
-    },
-    {
-        "name": "Bolivia",
-        "description": "es un país soberano situado en la región noroccidental de América del Sur. Se constituye en un Estado unitario, social y democrático de derecho, cuya forma de gobierno es presidencialista con dos cámaras legislativas. Su capital y ciudad más poblada es Bogotá.",
-        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvAZ58nHbGfqfJk0YIlFuyGzxrrewDCrNTPQ&s"
-    },
-    {
-        "name": "Rusia",
-        "description": "es un país soberano situado en la región noroccidental de América del Sur. Se constituye en un Estado unitario, social y democrático de derecho, cuya forma de gobierno es presidencialista con dos cámaras legislativas. Su capital y ciudad más poblada es Bogotá.",
-        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT87gu7pEcoQdjSvRProOIJ8aKkAi06PWo7Eg&s"
-    },
-    {
-        "name": "Colombia",
-        "description": "es un país soberano situado en la región noroccidental de América del Sur. Se constituye en un Estado unitario, social y democrático de derecho, cuya forma de gobierno es presidencialista con dos cámaras legislativas. Su capital y ciudad más poblada es Bogotá.",
-        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvAZ58nHbGfqfJk0YIlFuyGzxrrewDCrNTPQ&s"
-    },
-    {
-        "name": "Ecuador",
-        "description": "es un país soberano situado en la región noroccidental de América del Sur. Se constituye en un Estado unitario, social y democrático de derecho, cuya forma de gobierno es presidencialista con dos cámaras legislativas. Su capital y ciudad más poblada es Bogotá.",
-        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXv13OtJ1eW7cG8aFDCvshXPPYzvuexnOc0Q&s"
-    }
+  {
+    "name": "Playa del Carmen",
+    "description": "Playa del Carmen es una ciudad costera en la Riviera Maya, México, conocida por sus playas de arena blanca, aguas cristalinas y vibrante vida nocturna. La Quinta Avenida es el centro de la actividad, con tiendas, restaurantes y bares. También está cerca de sitios arqueológicos mayas y parques temáticos naturales.",
+    "img": "/public/images/destinos/playa_del-carmen.jpg"
+  },
+  {
+    "name": "Rio de Janeiro",
+    "description": "Río de Janeiro es una ciudad icónica en Brasil, famosa por sus impresionantes playas como Copacabana e Ipanema, el Cristo Redentor en el Corcovado y el vibrante Carnaval. Ofrece un paisaje espectacular con montañas, selvas urbanas y una animada vida cultural.",
+    "img": "/public/images/destinos/rio_de_janeiro.jpg"
+  },
+  {
+    "name": "Cusco",
+    "description": "Cusco es una ciudad histórica en el sur de Perú, conocida por ser la antigua capital del Imperio Inca. Ofrece una rica mezcla de arquitectura inca y colonial, destacando la Plaza de Armas y la Catedral. Es también el punto de partida para visitar Machu Picchu, una de las maravillas del mundo.",
+    "img": "/public/images/destinos/cusco.jpg"
+  },
+  {
+    "name": "New York",
+    "description": "Nueva York es una ciudad vibrante en Estados Unidos, famosa por su icónico horizonte, que incluye la Estatua de la Libertad, Times Square y Central Park. Es un centro global de cultura, negocios y entretenimiento, con una rica oferta de museos, teatros y restaurantes.",
+    "img": "/public/images/destinos/new_york.webp"
+  },
+  {
+    "name": "Toronto",
+    "description": "Toronto es la ciudad más grande de Canadá y un importante centro cultural y financiero. Conocida por su diversidad cultural, la icónica Torre CN y una vibrante escena artística y gastronómica, ofrece una mezcla de modernidad y encanto cosmopolita.",
+    "img": "/public/images/destinos/toronto.jpg"
+  },
+  {
+    "name": "Ushuaia",
+    "description": "Ushuaia es la ciudad más austral del mundo, ubicada en el sur de Argentina, en la región de Tierra del Fuego. Conocida como la 'Ciudad del Fin del Mundo', ofrece paisajes impresionantes de montañas, bosques y el Canal Beagle, y es un punto de partida para explorar la Antártida.",
+    "img": "/public/images/destinos/ushuaia.webp"
+  },
+  {
+    "name": "Chicago",
+    "description": "Chicago es una gran ciudad en el estado de Illinois, conocida por su arquitectura distintiva, el icónico Skyline con rascacielos como la Torre Willis, y su vibrante escena cultural. Destaca por sus museos, el Millennium Park y su rica tradición en jazz y blues.",
+    "img": "/public/images/destinos/chicago.jpg"
+  },
+  {
+    "name": "Machu Picchu",
+    "description": "Machu Picchu es una antigua ciudad inca situada en las montañas de Perú, conocida por sus impresionantes ruinas y su ubicación en la cima de una montaña. Es uno de los destinos arqueológicos más importantes y emblemáticos del mundo, reconocido por su arquitectura y vistas panorámicas.",
+    "img": "/public/images/destinos/machu_picchu.jpg"
+  },
+  {
+    "name": "Honolulu",
+    "description": "Honolulu es la capital y ciudad más grande de Hawái, ubicada en la isla de Oahu. Conocida por sus playas como Waikiki, su clima tropical y su vibrante cultura, es un destino popular para turistas. También es el centro político y económico del estado.",
+    "img": "/public/images/destinos/honolulu.webp"
+  },
+  {
+    "name": "Ciudad de México",
+    "description": "Ciudad de México es la capital y la ciudad más grande de México. Es un vibrante centro cultural y económico con una rica historia que se refleja en sus sitios arqueológicos, como Teotihuacán, y su arquitectura colonial. La ciudad ofrece una amplia variedad de museos, restaurantes y vida nocturna.",
+    "img": "/public/images/destinos/ciudad_de_mexico.jpg"
+  },
+  {
+    "name": "Santorini",
+    "description": "Santorini es una isla volcánica en el mar Egeo, Grecia, conocida por sus impresionantes vistas, casas blancas con techos azules y playas de arena negra. Ofrece paisajes dramáticos, una rica historia y es famosa por sus atardeceres espectaculares.",
+    "img": "/public/images/destinos/santorini.jpg"
+  },
+  {
+    "name": "Lisboa",
+    "description": "Lisboa es la capital de Portugal, conocida por su encanto histórico y su vibrante vida cultural. La ciudad se destaca por sus callejones empedrados, coloridos azulejos, el histórico tranvía amarillo y vistas panorámicas desde el Barrio Alfama. Ofrece una mezcla de arquitectura antigua y moderna, así como una rica oferta gastronómica y cultural.",
+    "img": "/public/images/destinos/lisboa.webp"
+  },
+  {
+    "name": "Granada",
+    "description": "Lisboa es la capital de Portugal, conocida por su encanto histórico y su vibrante vida cultural. La ciudad se destaca por sus callejones empedrados, coloridos azulejos, el histórico tranvía amarillo y vistas panorámicas desde el Barrio Alfama. Ofrece una mezcla de arquitectura antigua y moderna, así como una rica oferta gastronómica y cultural.",
+    "img": "/public/images/destinos/granada.jpg"
+  },
+  {
+    "name": "París",
+    "description": "París, la capital de Francia, es conocida como la 'Ciudad de la Luz'. Famosa por sus monumentos emblemáticos como la Torre Eiffel, el Louvre y la Catedral de Notre-Dame, ofrece una rica historia, cultura y arte. La ciudad también destaca por sus encantadores barrios, cafés y boutiques.",
+    "img": "/public/images/destinos/paris.jpg"
+  },
+  {
+    "name": "Berlín",
+    "description": "Berlín es la capital de Alemania y una ciudad vibrante conocida por su historia rica y su escena cultural dinámica. Destaca por sitios históricos como el Muro de Berlín, la Puerta de Brandeburgo y el Reichstag, así como por su vida nocturna, museos y arquitectura moderna.",
+    "img": "/public/images/destinos/berlin.jpg"
+  },
+  {
+    "name": "Reykjavik",
+    "description": "Reykjavik es la capital de Islandia y la ciudad más grande del país. Conocida por su ambiente moderno y acogedor, ofrece una mezcla única de arquitectura contemporánea, vida cultural vibrante y paisajes naturales cercanos, como géiseres y aguas termales.",
+    "img": "/public/images/destinos/reykjavik.jpg"
+  },
+  {
+    "name": "Londres",
+    "description": "Londres es la capital del Reino Unido y una de las ciudades más influyentes del mundo. Famosa por su rica historia y diversidad cultural, destaca por monumentos icónicos como el Big Ben, la Torre de Londres y el Palacio de Buckingham, así como por sus museos, teatros y vibrante vida urbana.",
+    "img": "/public/images/destinos/londres.webp"
+  },
+  {
+    "name": "Chamonix",
+    "description": "Chamonix es una encantadora ciudad en los Alpes franceses, conocida por ser un destino popular para el esquí y el montañismo. Situada al pie del Mont Blanc, ofrece paisajes impresionantes, actividades al aire libre durante todo el año y un ambiente acogedor para los amantes de la montaña.",
+    "img": "/public/images/destinos/chamonix.jpg"
+  },
+  {
+    "name": "Malta",
+    "description": "Malta es un archipiélago en el Mediterráneo, conocido por su rica historia, aguas cristalinas y clima soleado. Ofrece un patrimonio cultural impresionante con sitios como La Valeta, la capital, y diversas fortalezas históricas, además de playas y actividades al aire libre.",
+    "img": "/public/images/destinos/malta.jpg"},
+  {
+    "name": "Madrid",
+    "description": "Madrid es la capital de España, conocida por su vibrante vida cultural y su rica historia. Destaca por el Museo del Prado, el Palacio Real y la animada Puerta del Sol. La ciudad ofrece una mezcla de arquitectura histórica y moderna, así como una vibrante vida nocturna y gastronómica.",
+    "img": "/public/images/destinos/madrid.jpg"
+  }
 ]

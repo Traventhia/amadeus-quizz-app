@@ -2,25 +2,137 @@
 // Images
 const dataInfo = [
   // America
-  { place: 'Playa Del Carmen', location: 'México', climate: 'Calido', descipccion: 'Playa del Carmen es conocida por sus playas de arena blanca y aguas cristalinas. Es un destino popular en la Riviera Maya con atracciones como el parque temático Xcaret, la Quinta Avenida para compras y vida nocturna, y cercanía a las ruinas mayas de Tulum y Chichén Itzá.', image: '/src/assets/images/destinos/playa_del-carmen.jpg'},
-  { place: 'Rio de Janeiro', location: 'Brasil', climate: 'Caluroso - Templado', descipccion: 'Famoso por sus playas icónicas como Copacabana e Ipanema, el Cristo Redentor, el Pan de Azúcar, y el carnaval. Río también ofrece una vibrante vida nocturna y una rica cultura brasileña.', image: '/src/assets/images/destinos/Rio de Janeiro.jpg'},
-  { place: 'Cusco', location: 'Perú', climate: 'Calido', descipccion: 'Antiguamente la capital del Imperio Inca, Cusco es el punto de partida para explorar Machu Picchu. La ciudad tiene una rica herencia cultural con arquitectura colonial y sitios arqueológicos.', image: '/src/assets/images/destinos/Cusco.jpg'},
-  { place: 'Nueva York', location: 'EE.UU', climate: 'Frios - Nevados', descipccion: 'Conocida por sus icónicos sitios como Times Square, Central Park, la Estatua de la Libertad, Broadway, y museos como el MET. Es un centro cultural y financiero con una oferta infinita de actividades.', image: '/src/assets/images/destinos/new_york.webp'},
-  { place: 'Toronto ', location: 'Canadá', climate: 'Calidos - Frios', descipccion: 'Toronto es una ciudad cosmopolita conocida por su diversidad cultural, la CN Tower, el Distillery District, y museos como el Royal Ontario Museum. Ofrece una vibrante escena artística y gastronómica.', image: '/src/assets/images/destinos/toronto.jpg'},
-  { place: 'Ushuaia', location: 'Argentina', climate: 'Calidos - Frios', descipccion: 'Conocida como la ciudad más austral del mundo, Ushuaia es un punto de partida para explorar la Antártida y ofrece actividades como navegación en el Canal Beagle, senderismo en el Parque Nacional Tierra del Fuego, y excursiones en el Glaciar Martial.', image: '/src/assets/images/destinos/ushuaia.webp'},
-  { place: 'Machu Pichu', location: 'Australia', climate: 'Calidos', descipccion: 'Es una antigua ciudad inca situada en lo alto de los Andes, conocida por su arquitectura y su asombroso entorno natural. Es uno de los destinos turísticos más importantes de Perú.', image: '/src/assets/images/destinos/machu_picchu.jpg'},
-  { place: 'Honolulu', location: 'Hawái', climate: 'calidas', descipccion: 'La capital de Hawái, Honolulu, es famosa por sus playas como Waikiki, el Diamond Head, el Pearl Harbor, y una rica cultura polinesia. Es un destino ideal para el surf, la exploración y la relajación.', image: '/src/assets/images/destinos/honolulu.webp'},
+  {
+    place: 'Playa Del Carmen',
+    location: 'México',
+    climate: 'Calido',
+    descipccion:
+      'Playa del Carmen es conocida por sus playas de arena blanca y aguas cristalinas. Es un destino popular en la Riviera Maya con atracciones como el parque temático Xcaret, la Quinta Avenida para compras y vida nocturna, y cercanía a las ruinas mayas de Tulum y Chichén Itzá.',
+    image: '/images/destinos/playa_del-carmen.jpg',
+  },
+  {
+    place: 'Rio de Janeiro',
+    location: 'Brasil',
+    climate: 'Caluroso - Templado',
+    descipccion:
+      'Famoso por sus playas icónicas como Copacabana e Ipanema, el Cristo Redentor, el Pan de Azúcar, y el carnaval. Río también ofrece una vibrante vida nocturna y una rica cultura brasileña.',
+    image: '/images/destinos/rio_de_janeiro.jpg',
+  },
+  {
+    place: 'Cusco',
+    location: 'Perú',
+    climate: 'Calido',
+    descipccion:
+      'Antiguamente la capital del Imperio Inca, Cusco es el punto de partida para explorar Machu Picchu. La ciudad tiene una rica herencia cultural con arquitectura colonial y sitios arqueológicos.',
+    image: '/public/images/destinos/cusco.jpg',
+  },
+  {
+    place: 'Nueva York',
+    location: 'EE.UU',
+    climate: 'Frios - Nevados',
+    descipccion:
+      'Conocida por sus icónicos sitios como Times Square, Central Park, la Estatua de la Libertad, Broadway, y museos como el MET. Es un centro cultural y financiero con una oferta infinita de actividades.',
+    image: '/images/destinos/new_york.webp',
+  },
+  {
+    place: 'Toronto ',
+    location: 'Canadá',
+    climate: 'Calidos - Frios',
+    descipccion:
+      'Toronto es una ciudad cosmopolita conocida por su diversidad cultural, la CN Tower, el Distillery District, y museos como el Royal Ontario Museum. Ofrece una vibrante escena artística y gastronómica.',
+    image: '/images/destinos/toronto.jpg',
+  },
+  {
+    place: 'Ushuaia',
+    location: 'Argentina',
+    climate: 'Calidos - Frios',
+    descipccion:
+      'Conocida como la ciudad más austral del mundo, Ushuaia es un punto de partida para explorar la Antártida y ofrece actividades como navegación en el Canal Beagle, senderismo en el Parque Nacional Tierra del Fuego, y excursiones en el Glaciar Martial.',
+    image: '/images/destinos/ushuaia.webp',
+  },
+  {
+    place: 'Machu Pichu',
+    location: 'Australia',
+    climate: 'Calidos',
+    descipccion:
+      'Es una antigua ciudad inca situada en lo alto de los Andes, conocida por su arquitectura y su asombroso entorno natural. Es uno de los destinos turísticos más importantes de Perú.',
+    image: '/images/destinos/machu_picchu.jpg',
+  },
+  {
+    place: 'Honolulu',
+    location: 'Hawái',
+    climate: 'calidas',
+    descipccion:
+      'La capital de Hawái, Honolulu, es famosa por sus playas como Waikiki, el Diamond Head, el Pearl Harbor, y una rica cultura polinesia. Es un destino ideal para el surf, la exploración y la relajación.',
+    image: '/images/destinos/honolulu.webp',
+  },
 
   // Europa
-  { place: 'Santorini', location: 'Grecia', climate: 'Caluroso', descipccion: 'Santorini es famosa por sus casas blancas con techos azules, vistas impresionantes al mar Egeo, y atardeceres espectaculares. Es conocida por sus playas volcánicas, viñedos, y sitios arqueológicos como Akrotiri. La isla es ideal para una escapada romántica y para disfrutar de la arquitectura típica griega.', image: '/src/assets/images/destinos/santorini.jpg'},
-  { place: 'Lisboa', location: 'Portugal', climate: 'Calido', descipccion: 'Lisboa es conocida por sus colinas, calles empedradas y tranvías históricos. Ofrece una rica historia con lugares como la Torre de Belém, el Monasterio de los Jerónimos, y una vibrante vida nocturna en el Barrio Alto. También destaca por su gastronomía y vistas panorámicas desde el mirador de São Pedro de Alcântara.', image: '/src/assets/images/destinos/lisboa.webp'},
-  { place: 'Granada', location: 'España', climate: 'Caluroso - Inviernos Frescos', descipccion: 'Granada es famosa por la Alhambra, una impresionante fortaleza y palacio morisco, y el Albaicín, un barrio histórico con calles estrechas. La ciudad también ofrece una animada vida universitaria y vistas a Sierra Nevada.', image: '/src/assets/images/destinos/granada.jpg'},
-  { place: 'París', location: 'Francia', climate: 'Inviernos Frios - Veranos Suaves', descipccion: 'Conocida como la Ciudad de la Luz, París ofrece monumentos icónicos como la Torre Eiffel, el Louvre, y Notre-Dame. La ciudad también es famosa por sus barrios encantadores como Montmartre, y por su gastronomía y vida cultural.', image: '/src/assets/images/destinos/paris.jpg'},
-  { place: 'Berlín', location: 'Alemania', climate: 'Frios Inviernos - Veranos Calidos', descipccion: 'Berlín es una ciudad vibrante con una rica historia. Ofrece lugares emblemáticos como el Muro de Berlín, la Puerta de Brandenburgo, y museos de renombre en la Isla de los Museos. La ciudad es también conocida por su vida nocturna y eventos culturales.', image: '/src/assets/images/destinos/berlin.jpg'},
-  { place: 'Algarve', location: 'Portugal', climate: 'Veranos Calidos - Inviernos Frescos', descipccion: 'El Algarve es conocido por sus playas doradas, acantilados impresionantes, y pueblos pintorescos como Lagos y Tavira. También ofrece campos de golf, deportes acuáticos y un clima agradable durante todo el año.', image: '/src/assets/images/destinos/algarve.webp'},
-  { place: 'Niza', location: 'Francia', climate: 'Calido', descipccion: 'Niza es conocida por su hermosa Promenade des Anglais, playas y el casco antiguo (Vieux Nice) con su arquitectura colorida y mercados vibrantes. También es un punto de partida ideal para explorar la Riviera Francesa.', image: '/src/assets/images/destinos/niza.jpg'},
-  { place: 'Roma', location: 'Italia', climate: 'Caluroso - Inviernos Suaves', descipccion: 'Roma es famosa por sus monumentos históricos como el Coliseo, el Foro Romano y la Ciudad del Vaticano con la Basílica de San Pedro. La ciudad ofrece una rica historia, arquitectura antigua, y una vibrante vida urbana.', image: '/src/assets/images/destinos/roma.jpg'}
-]
+  {
+    place: 'Santorini',
+    location: 'Grecia',
+    climate: 'Caluroso',
+    descipccion:
+      'Santorini es famosa por sus casas blancas con techos azules, vistas impresionantes al mar Egeo, y atardeceres espectaculares. Es conocida por sus playas volcánicas, viñedos, y sitios arqueológicos como Akrotiri. La isla es ideal para una escapada romántica y para disfrutar de la arquitectura típica griega.',
+    image: '/images/destinos/santorini.jpg',
+  },
+  {
+    place: 'Lisboa',
+    location: 'Portugal',
+    climate: 'Calido',
+    descipccion:
+      'Lisboa es conocida por sus colinas, calles empedradas y tranvías históricos. Ofrece una rica historia con lugares como la Torre de Belém, el Monasterio de los Jerónimos, y una vibrante vida nocturna en el Barrio Alto. También destaca por su gastronomía y vistas panorámicas desde el mirador de São Pedro de Alcântara.',
+    image: '/images/destinos/lisboa.webp',
+  },
+  {
+    place: 'Granada',
+    location: 'España',
+    climate: 'Caluroso - Inviernos Frescos',
+    descipccion:
+      'Granada es famosa por la Alhambra, una impresionante fortaleza y palacio morisco, y el Albaicín, un barrio histórico con calles estrechas. La ciudad también ofrece una animada vida universitaria y vistas a Sierra Nevada.',
+    image: '/images/destinos/granada.jpg',
+  },
+  {
+    place: 'París',
+    location: 'Francia',
+    climate: 'Inviernos Frios - Veranos Suaves',
+    descipccion:
+      'Conocida como la Ciudad de la Luz, París ofrece monumentos icónicos como la Torre Eiffel, el Louvre, y Notre-Dame. La ciudad también es famosa por sus barrios encantadores como Montmartre, y por su gastronomía y vida cultural.',
+    image: '/images/destinos/paris.jpg',
+  },
+  {
+    place: 'Berlín',
+    location: 'Alemania',
+    climate: 'Frios Inviernos - Veranos Calidos',
+    descipccion:
+      'Berlín es una ciudad vibrante con una rica historia. Ofrece lugares emblemáticos como el Muro de Berlín, la Puerta de Brandenburgo, y museos de renombre en la Isla de los Museos. La ciudad es también conocida por su vida nocturna y eventos culturales.',
+    image: '/images/destinos/berlin.jpg',
+  },
+  {
+    place: 'Algarve',
+    location: 'Portugal',
+    climate: 'Veranos Calidos - Inviernos Frescos',
+    descipccion:
+      'El Algarve es conocido por sus playas doradas, acantilados impresionantes, y pueblos pintorescos como Lagos y Tavira. También ofrece campos de golf, deportes acuáticos y un clima agradable durante todo el año.',
+    image: '/images/destinos/algarve.webp',
+  },
+  {
+    place: 'Niza',
+    location: 'Francia',
+    climate: 'Calido',
+    descipccion:
+      'Niza es conocida por su hermosa Promenade des Anglais, playas y el casco antiguo (Vieux Nice) con su arquitectura colorida y mercados vibrantes. También es un punto de partida ideal para explorar la Riviera Francesa.',
+    image: '/images/destinos/niza.jpg',
+  },
+  {
+    place: 'Roma',
+    location: 'Italia',
+    climate: 'Caluroso - Inviernos Suaves',
+    descipccion:
+      'Roma es famosa por sus monumentos históricos como el Coliseo, el Foro Romano y la Ciudad del Vaticano con la Basílica de San Pedro. La ciudad ofrece una rica historia, arquitectura antigua, y una vibrante vida urbana.',
+    image: '/images/destinos/roma.jpg',
+  },
+];
 
 // Styles
 import './Slider.scss';
@@ -39,9 +151,10 @@ import ArrowRight from '@components/buttons/ArrowRight.astro';
     <!-- list -->
     <div class="list__items">
       <!-- Items -->
-      {dataInfo.map((info) => ( 
-      <div class="item">
-          <CardInformation
+      {
+        dataInfo.map((info) => (
+          <div class="item">
+            <CardInformation
               src={info.image}
               alt="Imagen del Destino"
               place={info.place}
@@ -50,80 +163,87 @@ import ArrowRight from '@components/buttons/ArrowRight.astro';
               description={info.descipccion}
               href="#"
             />
-      </div>
-          ))}
+          </div>
+        ))
+      }
 
-    <!-- Thumbnail -->
-    <div class="thumbnail">
-      {dataInfo.map((info) => (
-        <div class="card__content">
-        <Card
-        src={info.image}
-            alt="Imagen del destino turistico"
-            title={info.place}
-            description={info.location}
-        />
+      <!-- Thumbnail -->
+      <div class="thumbnail">
+        {
+          dataInfo.map((info) => (
+            <div class="card__content">
+              <Card
+                src={info.image}
+                alt="Imagen del destino turistico"
+                title={info.place}
+                description={info.location}
+              />
+            </div>
+          ))
+        }
       </div>
-      ))}
-  </div>
 
-    <!-- Arrows -->
-    <div class="arrows">
-      <ArrowLeft direction={'prev'} />
-      <ArrowRight direction={'next'} />
+      <!-- Arrows -->
+      <div class="arrows">
+        <ArrowLeft direction={'prev'} />
+        <ArrowRight direction={'next'} />
+      </div>
+      <div class="time"></div>
     </div>
-    <div class="time"></div>
+
+    <script>
+      // Variables DOM
+      const nextDom = document.getElementById('next') as HTMLButtonElement;
+      const prevDom = document.getElementById('prev') as HTMLButtonElement;
+      const carrouselDom = document.querySelector('.carrousel') as HTMLElement;
+      const listItemDom = document.querySelector(
+        '.carrousel .list__items',
+      ) as HTMLElement;
+      const thumbnailDom = document.querySelector('.carrousel .thumbnail') as HTMLElement;
+
+      // Tipos de datos para el timeout
+      let runTimeOut: number | undefined;
+      let runAutoRun: number | undefined;
+
+      // Intervalos de tiempo
+      const timeRunning: number = 3000;
+      const timeAutoNext: number = 5000;
+
+      // Función para mostrar el slider
+      function showSlider(type: 'next' | 'prev'): void {
+        const itemSlider = document.querySelectorAll(
+          '.carrousel .list__items .item',
+        ) as NodeListOf<HTMLElement>;
+        const itemThumbnail = document.querySelectorAll(
+          '.carrousel .thumbnail .card__content',
+        ) as NodeListOf<HTMLElement>;
+
+        if (type === 'next') {
+          listItemDom.appendChild(itemSlider[0]);
+          thumbnailDom.appendChild(itemThumbnail[0]);
+          carrouselDom.classList.add('next');
+        } else {
+          const positionLastItem = itemSlider.length - 1;
+          listItemDom.prepend(itemSlider[positionLastItem]);
+          thumbnailDom.prepend(itemThumbnail[positionLastItem]);
+          carrouselDom.classList.add('prev');
+        }
+
+        clearTimeout(runTimeOut);
+        runTimeOut = window.setTimeout(() => {
+          carrouselDom.classList.remove('next');
+          carrouselDom.classList.remove('prev');
+        }, timeRunning);
+
+        clearTimeout(runAutoRun);
+        runAutoRun = window.setTimeout(() => {
+          nextDom.click();
+        }, timeAutoNext);
+      }
+
+      // Eventos para los botones
+      nextDom.onclick = () => showSlider('next');
+      prevDom.onclick = () => showSlider('prev');
+    </script>
+  </div>
 </div>
-
-<script>
-  // Variables DOM
-  const nextDom = document.getElementById('next') as HTMLButtonElement;
-  const prevDom = document.getElementById('prev') as HTMLButtonElement;
-  const carrouselDom = document.querySelector('.carrousel') as HTMLElement;
-  const listItemDom = document.querySelector('.carrousel .list__items') as HTMLElement;
-  const thumbnailDom = document.querySelector('.carrousel .thumbnail') as HTMLElement;
-
-  // Tipos de datos para el timeout
-  let runTimeOut: number | undefined;
-  let runAutoRun: number | undefined;
-
-  // Intervalos de tiempo
-  const timeRunning: number = 3000;
-  const timeAutoNext: number = 5000;
-
-  // Función para mostrar el slider
-  function showSlider(type: 'next' | 'prev'): void {
-    const itemSlider = document.querySelectorAll(
-      '.carrousel .list__items .item',
-    ) as NodeListOf<HTMLElement>;
-    const itemThumbnail = document.querySelectorAll(
-      '.carrousel .thumbnail .card__content',
-    ) as NodeListOf<HTMLElement>;
-
-    if (type === 'next') {
-      listItemDom.appendChild(itemSlider[0]);
-      thumbnailDom.appendChild(itemThumbnail[0]);
-      carrouselDom.classList.add('next');
-    } else {
-      const positionLastItem = itemSlider.length - 1;
-      listItemDom.prepend(itemSlider[positionLastItem]);
-      thumbnailDom.prepend(itemThumbnail[positionLastItem]);
-      carrouselDom.classList.add('prev');
-    }
-
-    clearTimeout(runTimeOut);
-    runTimeOut = window.setTimeout(() => {
-      carrouselDom.classList.remove('next');
-      carrouselDom.classList.remove('prev');
-    }, timeRunning);
-
-    clearTimeout(runAutoRun);
-    runAutoRun = window.setTimeout(() => {
-      nextDom.click();
-    }, timeAutoNext);
-  }
-
-  // Eventos para los botones
-  nextDom.onclick = () => showSlider('next');
-  prevDom.onclick = () => showSlider('prev');
-</script>

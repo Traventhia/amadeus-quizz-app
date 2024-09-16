@@ -8,7 +8,7 @@
 
 .content {
     position: absolute;
-    top: 8%;
+    top: 15%;
     left: 6%;
     max-width: 50%;
     padding: 0 8% 0 2%;
@@ -86,9 +86,9 @@
 
         & button:nth-child(2) {
             background-color: #ffffff;
+            border: 1px solid transparent;
             border-radius: 8px;
-            border: transparent;
-            transition: background-color 0.5s ease;
+            transition: background-color 0.5s ease, border 0s ease, color 0.5s ease;
 
             &:hover {
                 background-color: transparent;

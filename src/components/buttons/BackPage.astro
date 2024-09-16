@@ -1,0 +1,25 @@
+<!-- Botón de regreso -->
+<button type="button" class="return__button" onclick="window.location.href = '/'">
+    <i class="fas fa-arrow-left"></i> Back
+</button>
+
+<style>
+    .return__button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #0d65d9;
+    font-weight: bold;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 2000;
+    transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .return__button:hover {
+        transform: scale(1.1);
+    }
+</style>
