@@ -31,13 +31,13 @@
         }
 
         // Animate
+        .content,
         .item:nth-child(1) .place,
         .item:nth-child(1) .location,
         .item:nth-child(1) .climate,
         .item:nth-child(1) .description,
         .item:nth-child(1) .buttons {
             transform: translateY(80px);
-            filter: blur(15px);
             opacity: 0;
             animation: showContent 0.5s 1s linear 1 forwards;
         }
@@ -45,9 +45,12 @@
         @keyframes showContent {
             to {
                 opacity: 1;
-                filter: blur(0);
                 transform: translateY(0);
             }
+        }
+
+        .content {
+            animation-delay: 1.2s;
         }
 
         .item:nth-child(1) .place {
@@ -180,6 +183,7 @@
         animation: showThumbnail 0.5s linear 1 forwards;
     }
 
+    .content,
     .carrousel .list__items .item:nth-child(2) .place,
     .carrousel .list__items .item:nth-child(2) .location,
     .carrousel .list__items .item:nth-child(2) .climate,
@@ -192,7 +196,6 @@
         to {
             opacity: 0;
             transform: translateY(150px);
-            filter: blur(20px);
         }
     }
 

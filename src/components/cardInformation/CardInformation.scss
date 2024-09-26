@@ -53,6 +53,11 @@
         text-transform: uppercase;
     }
 
+    & .climate {
+        text-transform: capitalize;
+        text-shadow: 0 0 0 0 $secondary-blue;
+    }
+
     & .buttons {
         margin: 20px 0 20px 30px;
         display: grid;
