@@ -1,7 +1,10 @@
 # 🧠 Traventhia Game
 Este proyecto se basa en una propuesta de reto proporcionada por Amadeus, en la que nos encargamos de resolver un problema basado en la recopilación de datos de usuarios utilizando estrategias libres.
 
-![image](https://github.com/user-attachments/assets/b2964015-d58b-4909-98a0-fe31f5081a5a)
+
+
+![Captura de pantalla 2024-09-26 134035](https://github.com/user-attachments/assets/00dd60ab-c2ff-478a-a608-2289bc2a7038)
+
 
 # 🎮 Game Preview
 https://github.com/user-attachments/assets/6a93d420-6dce-428f-90fa-12762deb749b
