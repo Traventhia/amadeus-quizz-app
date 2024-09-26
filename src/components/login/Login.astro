@@ -21,14 +21,44 @@ import './Login.scss';
       <div class="social__icons">
         <a href="#" class="icon"><i class="fab fa-google-plus-g"></i></a>
         <a href="#" class="icon"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" class="icon"><i class="fab fa-github"></i></a>
-        <a href="#" class="icon"><i class="fab fa-linkedin-in"></i></a>
       </div>
 
-      <span>Or use your email for registration</span>
-      <input type="text" placeholder="Name" />
-      <input type="email" placeholder="Email" />
-      <input type="password" placeholder="Password" />
+      <span style="margin: 10px 0 12px">Or use your email for registration</span>
+
+      <div class="input-group">
+        <input required="" type="text" name="text" autocomplete="off" class="input" />
+        <label class="email-label">
+          <span style="transition-delay:0ms;">N</span>
+          <span style="transition-delay:50ms;">a</span>
+          <span style="transition-delay:100ms;">m</span>
+          <span style="transition-delay:150ms;">e</span>
+        </label>
+      </div>
+
+      <div class="input-group">
+        <input required="" type="text" name="text" autocomplete="off" class="input" />
+        <label class="email-label">
+          <span style="transition-delay:0ms;">E</span>
+          <span style="transition-delay:50ms;">m</span>
+          <span style="transition-delay:100ms;">a</span>
+          <span style="transition-delay:150ms;">i</span>
+          <span style="transition-delay:200ms;">l</span>
+        </label>
+      </div>
+
+      <div class="input-group">
+        <input required="" type="text" name="text" autocomplete="off" class="input" />
+        <label class="password-label">
+          <span style="transition-delay:0ms;">P</span>
+          <span style="transition-delay:50ms;">a</span>
+          <span style="transition-delay:100ms;">s</span>
+          <span style="transition-delay:150ms;">w</span>
+          <span style="transition-delay:200ms;">o</span>
+          <span style="transition-delay:250ms;">r</span>
+          <span style="transition-delay:300ms;">d</span>
+        </label>
+      </div>
+
       <button>Sign Up</button>
     </form>
   </div>
@@ -40,14 +70,34 @@ import './Login.scss';
       <div class="social__icons">
         <a href="#" class="icon"><i class="fab fa-google-plus-g"></i></a>
         <a href="#" class="icon"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" class="icon"><i class="fab fa-github"></i></a>
-        <a href="#" class="icon"><i class="fab fa-linkedin-in"></i></a>
       </div>
 
-      <span>Or use your email and password</span>
+      <span style="margin: 10px 0 12px">Or use your email and password</span>
 
-      <input type="email" placeholder="Email" />
-      <input type="password" placeholder="Password" />
+      <div class="input-group">
+        <input required="" type="email" name="text" autocomplete="off" class="input" />
+        <label class="email-label">
+          <span style="transition-delay:0ms;">E</span>
+          <span style="transition-delay:50ms;">m</span>
+          <span style="transition-delay:100ms;">a</span>
+          <span style="transition-delay:150ms;">i</span>
+          <span style="transition-delay:200ms;">l</span>
+        </label>
+      </div>
+
+      <div class="input-group">
+        <input required="" type="text" name="text" autocomplete="off" class="input" />
+        <label class="password-label">
+          <span style="transition-delay:0ms;">P</span>
+          <span style="transition-delay:50ms;">a</span>
+          <span style="transition-delay:100ms;">s</span>
+          <span style="transition-delay:150ms;">w</span>
+          <span style="transition-delay:200ms;">o</span>
+          <span style="transition-delay:250ms;">r</span>
+          <span style="transition-delay:300ms;">d</span>
+        </label>
+      </div>
+
       <a href="#"> Forgot your password? </a>
       <button>Sign In</button>
     </form>
@@ -71,21 +121,21 @@ import './Login.scss';
 </div>
 
 <BackPage>
+  <script>
+    const container = document.getElementById('container');
+    const registerBtn = document.getElementById('register');
+    const loginBtn = document.getElementById('login');
 
-<script>
-  const container = document.getElementById('container');
-  const registerBtn = document.getElementById('register');
-  const loginBtn = document.getElementById('login');
+    if (registerBtn) {
+      registerBtn.addEventListener('click', () => {
+        if (container) container.classList.add('active');
+      });
+    }
 
-  if (registerBtn) {
-    registerBtn.addEventListener('click', () => {
-      if (container) container.classList.add('active');
-    });
-  }
-
-  if (loginBtn) {
-    loginBtn.addEventListener('click', () => {
-      if (container) container.classList.remove('active');
-    });
-  }
-</script>
+    if (loginBtn) {
+      loginBtn.addEventListener('click', () => {
+        if (container) container.classList.remove('active');
+      });
+    }
+  </script>
+</BackPage>

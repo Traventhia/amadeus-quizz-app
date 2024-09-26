@@ -91,17 +91,6 @@ body {
     text-align: center;
 }
 
-.container input {
-    background-color: #eee;
-    border: none;
-    margin: 8px 0;
-    border-radius: 8px;
-    padding: 12px 15px;
-    width: 100%;
-    font-size: 14px;
-    outline: none;
-}
-
 .form__container {
     position: absolute;
     top: 0;
@@ -149,7 +138,7 @@ body {
 }
 
 .social__icons {
-    margin: 20px 0;
+    margin: 12px 0;
 }
 
 .social__icons a {
@@ -169,6 +158,44 @@ body {
     color: #fff;
     transform: scale(1.1);
     transition: transform .3s;
+}
+
+.input-group {
+    margin: 0 15px 15px;
+    position: relative;
+}
+
+.input {
+    border: solid 1.5px $secondary-blue;
+    border-radius: 1rem;
+    background: none;
+    padding: .7rem;
+    font-size: 1rem;
+    transition: border 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.email-label, .password-label, .name-label {
+    position: absolute;
+    top: -4px;
+    left: 15px;
+    color: $primary-blue;
+    pointer-events: none;
+    transform: translateY(1rem);
+    transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input:focus,
+input:valid {
+    outline: none;
+    border: 1.5px solid #1a73e8;
+}
+
+.input:focus~label,
+input:valid~label {
+    transform: translateY(-50%) scale(0.8);
+    background-color: #fff;
+    padding: 0 .2em;
+    color: #2196f3;
 }
 
 .toggle__container {
