@@ -6,74 +6,72 @@ const cardsData = [
     title: 'Destinos Inteligentes',
     description:
       'Descubre ciudades que están revolucionando el turismo con tecnología avanzada...',
-    image: '/assets/images/imagesGalery/cable-car-8357177_1280.webp',
+    image: '/images/destinos/Auckland1.jpg',
   },
   {
     title: 'Clasificación de Viajes Internacionales',
     description:
       'Explora cómo se categorizan los viajes globales según experiencias, actividades y propósitos...',
-    image: '/assets/images/imagesGalery/camogli-4324509_1280.jpg',
+    image: '/images/destinos/Cusco.jpg',
   },
   {
     title: 'Top Destinos Tecnológicos',
     description:
       'Visita las capitales de la innovación mundial, donde la tecnología se fusiona con el turismo...',
-    image: '/assets/images/imagesGalery/cathedral-6830526_1280.jpg',
-
+    image: '/images/destinos/MatterhornParadice.webp',
   },
   {
     title: 'Innovaciones en Viajes',
     description:
       'Desde la realidad virtual hasta la inteligencia artificial, conoce las últimas tecnologías que están transformando la forma en que viajamos...',
-    image: '/assets/images/imagesGalery/galata-4043037_1280.jpg',
-
+    image: '/images/destinos/Nueva-Zelanda.jpg',
   },
   {
     title: 'Viajes Sostenibles y de nuevas aventuras',
     description:
       'Cómo la tecnología está ayudando a que los viajes internacionales sean más sostenibles y responsables...',
-    image: '/assets/images/imagesGalery/hallstatt-3609863_1280.jpg',
+    image: '/public/images/destinos/Paris.jpg',
   },
   {
     title: 'Clasificación por Experiencia',
     description:
       'Conoce cómo se clasifican los destinos internacionales según la aventura, cultura, y relax que ofrecen...',
-    image: '/assets/images/imagesGalery/istanbul-915076_1280.jpg',
+    image: 'images/destinos/algarve.webp',
   },
 ];
 ---
 
 <div class="container__h">
-  <h2>Nuevos luagares por descubrir</h2>
+  <h2>Nuevos lugares por descubrir</h2>
 </div>
 <div class="container1">
-    <div class="container1__viajes">
-        <div class="container1__viajes--texto">
-            <h1 class="container1__viajes--titulo">
-              Vuela con Confianza, Descubre el Mundo con Nosotros
-            </h1>
-            <p class="container1__viajes--mensaje">
-              En nuestra aerolínea/agencia, cada detalle de tu viaje es importante. Desde la reserva
-              hasta el aterrizaje, nos dedicamos a ofrecerte seguridad, comodidad y un servicio
-              excepcional. Con nosotros, puedes explorar el mundo sabiendo que estás en buenas
-              manos. Viaja tranquilo, sueña en grande, y deja que te llevemos a descubrir lo mejor
-              que el mundo tiene para ofrecer.
-            </p>
-
-        </div>
+  <div class="container1__viajes">
+    <div class="container1__viajes--texto">
+      <h1 class="container1__viajes--titulo">
+        Vuela con Confianza, Descubre el Mundo con Nosotros
+      </h1>
+      <p class="container1__viajes--mensaje">
+        En nuestra aerolínea/agencia, cada detalle de tu viaje es importante. Desde la
+        reserva hasta el aterrizaje, nos dedicamos a ofrecerte seguridad, comodidad y un
+        servicio excepcional. Con nosotros, puedes explorar el mundo sabiendo que estás en
+        buenas manos. Viaja tranquilo, sueña en grande, y deja que te llevemos a descubrir
+        lo mejor que el mundo tiene para ofrecer.
+      </p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="container__body">
+      <div class="card-container">
+        {
+          cardsData.map((card) => (
+            <CardPromo
+              src={card.image}
+              title={card.title}
+              description={card.description}
+            />
+          ))
+        }
       </div>
-      <div class="container">
-        <div class="container__body">
-          <div class="card-container">
-            {
-              cardsData.map((card) => (
-                <CardPromo 
-                  src={card.image} 
-                  title={card.title} 
-                  description={card.description} />
-              ))
-            }
-          </div>
-        </div>
-      </div>
+    </div>
+  </div>
 </div>

@@ -1,284 +1,98 @@
 {
   "images": [
     {
-      "src": "/public/assets/images/imagesGalery/cable-car-8357177_1280.webp",
+      "src": "/images/destinos/Auckland1.jpg",
       "alt": "Image 1",
       "filters": ["playa"]
     },
     {
-      "src": "/public/assets/images/imagesGalery/camogli-4324509_1280.jpg",
+      "src": "/images/destinos/Cusco.jpg",
       "alt": "Image 2",
       "filters": ["ciudad"]
     },
     {
-      "src": "/public/assets/images/imagesGalery/cathedral-6830526_1280.jpg",
+      "src": "/images/destinos/algarve.webp",
       "alt": "Image 3",
       "filters": ["montana"]
     },
     {
-      "src": "/public/assets/images/imagesGalery/galata-4043037_1280.jpg",
+      "src": "/images/destinos/paris.jpg",
       "alt": "Image 3",
       "filters": ["bosque"]
     },
     {
-      "src": "/public/assets/images/imagesGalery/hallstatt-3609863_1280.jpg",
+      "src": "/images/destinos/berlin.jpg",
       "alt": "Image 3",
       "filters": ["playa"]
     },
     {
-      "src": "/public/assets/images/imagesGalery/istanbul-915076_1280.jpg",
+      "src": "/images/destinos/playa_del-carmen.jpg",
       "alt": "Image 3",
       "filters": ["ciudad"]
     },
     {
-      "src": "/public/assets/images/imagesGalery/jordan-1846284_1280.jpg",
+      "src": "/images/destinos/reykjavik.jpg",
       "alt": "Image 3",
       "filters": ["montana"]
     },
     {
-      "src": "/public/assets/images/imagesGalery/town-7015699_960_720.jpg",
+      "src": "/images/destinos/berlin.jpg",
       "alt": "Image 3",
       "filters": ["bosque"]
     },
     {
-      "src": "/public/assets/images/imagesGalery/cable-car-8357177_1280.webp",
+      "src": "/images/destinos/chamonix.jpg",
       "alt": "Image 1",
       "filters": ["playa"]
     },
     {
-      "src": "/public/assets/images/imagesGalery/camogli-4324509_1280.jpg",
+      "src": "/images/destinos/rio_de_janeiro.jpg",
       "alt": "Image 2",
       "filters": ["ciudad"]
     },
     {
-      "src": "/public/assets/images/imagesGalery/cathedral-6830526_1280.jpg",
+      "src": "/images/destinos/roma.jpg",
       "alt": "Image 3",
       "filters": ["montana"]
     },
     {
-      "src": "/public/assets/images/imagesGalery/galata-4043037_1280.jpg",
+      "src": "/images/destinos/honolulu.webp",
       "alt": "Image 3",
       "filters": ["bosque"]
     },
     {
-      "src": "/public/assets/images/imagesGalery/hallstatt-3609863_1280.jpg",
+      "src": "/images/destinos/toronto.jpg",
       "alt": "Image 3",
       "filters": ["playa"]
     },
     {
-      "src": "/public/assets/images/imagesGalery/istanbul-915076_1280.jpg",
+      "src": "/images/destinos/lisboa.webp",
       "alt": "Image 3",
       "filters": ["ciudad"]
     },
     {
-      "src": "/public/assets/images/imagesGalery/jordan-1846284_1280.jpg",
+      "src": "/images/destinos/granada.jpg",
       "alt": "Image 3",
       "filters": ["montana"]
-    },
-    {
-      "src": "/public/assets/images/imagesGalery/town-7015699_960_720.jpg",
+    },{
+      "src": "/images/destinos/honolulu.webp",
       "alt": "Image 3",
       "filters": ["bosque"]
     },
     {
-      "src": "/public/assets/images/imagesGalery/cable-car-8357177_1280.webp",
-      "alt": "Image 1",
-      "filters": ["playa"]
-    },
-    {
-      "src": "/public/assets/images/imagesGalery/camogli-4324509_1280.jpg",
-      "alt": "Image 2",
-      "filters": ["ciudad"]
-    },
-    {
-      "src": "/public/assets/images/imagesGalery/cathedral-6830526_1280.jpg",
-      "alt": "Image 3",
-      "filters": ["montana"]
-    },
-    {
-      "src": "/public/assets/images/imagesGalery/galata-4043037_1280.jpg",
-      "alt": "Image 3",
-      "filters": ["bosque"]
-    },
-    {
-      "src": "/public/assets/images/imagesGalery/hallstatt-3609863_1280.jpg",
+      "src": "/images/destinos/toronto.jpg",
       "alt": "Image 3",
       "filters": ["playa"]
     },
     {
-      "src": "/public/assets/images/imagesGalery/istanbul-915076_1280.jpg",
+      "src": "/images/destinos/lisboa.webp",
       "alt": "Image 3",
       "filters": ["ciudad"]
     },
     {
-      "src": "/public/assets/images/imagesGalery/jordan-1846284_1280.jpg",
+      "src": "/images/destinos/granada.jpg",
       "alt": "Image 3",
       "filters": ["montana"]
-    },
-    {
-      "src": "/public/assets/images/imagesGalery/town-7015699_960_720.jpg",
-      "alt": "Image 3",
-      "filters": ["bosque"]
-    },
-    {
-      "src": "/public/assets/images/imagesGalery/cable-car-8357177_1280.webp",
-      "alt": "Image 1",
-      "filters": ["playa"]
-    },
-    {
-      "src": "/public/assets/images/imagesGalery/camogli-4324509_1280.jpg",
-      "alt": "Image 2",
-      "filters": ["ciudad"]
-    },
-    {
-      "src": "/public/assets/images/imagesGalery/cathedral-6830526_1280.jpg",
-      "alt": "Image 3",
-      "filters": ["montana"]
-    },
-    {
-      "src": "/public/assets/images/imagesGalery/galata-4043037_1280.jpg",
-      "alt": "Image 3",
-      "filters": ["bosque"]
-    },
-    {
-      "src": "/public/assets/images/imagesGalery/hallstatt-3609863_1280.jpg",
-      "alt": "Image 3",
-      "filters": ["playa"]
-    },
-    {
-      "src": "/public/assets/images/imagesGalery/istanbul-915076_1280.jpg",
-      "alt": "Image 3",
-      "filters": ["ciudad"]
-    },
-    {
-      "src": "/public/assets/images/imagesGalery/jordan-1846284_1280.jpg",
-      "alt": "Image 3",
-      "filters": ["montana"]
-    },
-    {
-      "src": "/public/assets/images/imagesGalery/town-7015699_960_720.jpg",
-      "alt": "Image 3",
-      "filters": ["bosque"]
-    },
-    {
-      "src": "/public/assets/images/imagesGalery/cable-car-8357177_1280.webp",
-      "alt": "Image 1",
-      "filters": ["playa"]
-    },
-    {
-      "src": "/public/assets/images/imagesGalery/camogli-4324509_1280.jpg",
-      "alt": "Image 2",
-      "filters": ["ciudad"]
-    },
-    {
-      "src": "/public/assets/images/imagesGalery/cathedral-6830526_1280.jpg",
-      "alt": "Image 3",
-      "filters": ["montana"]
-    },
-    {
-      "src": "/public/assets/images/imagesGalery/galata-4043037_1280.jpg",
-      "alt": "Image 3",
-      "filters": ["bosque"]
-    },
-    {
-      "src": "/public/assets/images/imagesGalery/hallstatt-3609863_1280.jpg",
-      "alt": "Image 3",
-      "filters": ["playa"]
-    },
-    {
-      "src": "/public/assets/images/imagesGalery/istanbul-915076_1280.jpg",
-      "alt": "Image 3",
-      "filters": ["ciudad"]
-    },
-    {
-      "src": "/public/assets/images/imagesGalery/jordan-1846284_1280.jpg",
-      "alt": "Image 3",
-      "filters": ["montana"]
-    },
-    {
-      "src": "/public/assets/images/imagesGalery/town-7015699_960_720.jpg",
-      "alt": "Image 3",
-      "filters": ["bosque"]
-    },
-    {
-      "src": "/public/assets/images/imagesGalery/cable-car-8357177_1280.webp",
-      "alt": "Image 1",
-      "filters": ["playa"]
-    },
-    {
-      "src": "/public/assets/images/imagesGalery/camogli-4324509_1280.jpg",
-      "alt": "Image 2",
-      "filters": ["ciudad"]
-    },
-    {
-      "src": "/public/assets/images/imagesGalery/cathedral-6830526_1280.jpg",
-      "alt": "Image 3",
-      "filters": ["montana"]
-    },
-    {
-      "src": "/public/assets/images/imagesGalery/galata-4043037_1280.jpg",
-      "alt": "Image 3",
-      "filters": ["bosque"]
-    },
-    {
-      "src": "/public/assets/images/imagesGalery/hallstatt-3609863_1280.jpg",
-      "alt": "Image 3",
-      "filters": ["playa"]
-    },
-    {
-      "src": "/public/assets/images/imagesGalery/istanbul-915076_1280.jpg",
-      "alt": "Image 3",
-      "filters": ["ciudad"]
-    },
-    {
-      "src": "/public/assets/images/imagesGalery/jordan-1846284_1280.jpg",
-      "alt": "Image 3",
-      "filters": ["montana"]
-    },
-    {
-      "src": "/public/assets/images/imagesGalery/town-7015699_960_720.jpg",
-      "alt": "Image 3",
-      "filters": ["bosque"]
-    },
-    {
-      "src": "/public/assets/images/imagesGalery/cable-car-8357177_1280.webp",
-      "alt": "Image 1",
-      "filters": ["playa"]
-    },
-    {
-      "src": "/public/assets/images/imagesGalery/camogli-4324509_1280.jpg",
-      "alt": "Image 2",
-      "filters": ["ciudad"]
-    },
-    {
-      "src": "/public/assets/images/imagesGalery/cathedral-6830526_1280.jpg",
-      "alt": "Image 3",
-      "filters": ["montana"]
-    },
-    {
-      "src": "/public/assets/images/imagesGalery/galata-4043037_1280.jpg",
-      "alt": "Image 3",
-      "filters": ["bosque"]
-    },
-    {
-      "src": "/public/assets/images/imagesGalery/hallstatt-3609863_1280.jpg",
-      "alt": "Image 3",
-      "filters": ["playa"]
-    },
-    {
-      "src": "/public/assets/images/imagesGalery/istanbul-915076_1280.jpg",
-      "alt": "Image 3",
-      "filters": ["ciudad"]
-    },
-    {
-      "src": "/public/assets/images/imagesGalery/jordan-1846284_1280.jpg",
-      "alt": "Image 3",
-      "filters": ["montana"]
-    },
-    {
-      "src": "/public/assets/images/imagesGalery/town-7015699_960_720.jpg",
-      "alt": "Image 3",
-      "filters": ["bosque"]
     }
   ]
 }

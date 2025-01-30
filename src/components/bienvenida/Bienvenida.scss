@@ -4,24 +4,32 @@
 
     .content-blocks {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
-        margin-top: 2rem;
         gap: 1rem;
 
         .company-info {
+            display: flex;
             width: 45%;
             text-align: left;
+            justify-content: center;
+            flex-direction: column;
+            align-items: baseline;
 
             h2 {
+                margin: 0px 0 10px 0;
                 font-size: 2rem;
-                margin-bottom: 1rem;
+                text-align: left;
             }
 
             p {
-                font-size: 2rem;
+                font-size: 1.3rem;
                 line-height: 1.5;
-                margin-bottom: 1.5rem;
+                padding-right: 65px;
+            }
+
+            span {
+                font-weight: bold;
             }
 
             .learn-more-btn {
@@ -30,6 +38,7 @@
                 background-color: $secondary-blue;
                 color: white;
                 text-decoration: none;
+                border: none;
                 border-radius: 5px;
                 transition: background-color 0.3s ease;
 
@@ -41,8 +50,9 @@
 
         .company-image {
             width: 45%;
+
             img {
-                width: 100%;
+                width: 70%;
                 border-radius: 10px;
             }
         }

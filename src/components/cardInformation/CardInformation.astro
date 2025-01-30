@@ -1,27 +1,27 @@
 ---
-import './CardInformation.scss'
+import './CardInformation.scss';
 
 interface Props {
-    src: any;
-    alt: string;
-    place: any;
-    location: any;
-    climate: any;
-    description: any;
-    href: string;
+  src: string;
+  alt: string;
+  place: string;
+  location: string;
+  climate: string;
+  description: string;
+  href: string;
 }
 
 const { src, alt, place, location, climate, description, href } = Astro.props;
 ---
 
-<img class="carrousel__image" src={src} alt={alt}>
-    <div class="content">
-        <div class="place">{place}</div>
-        <div class="location">{location}</div>
-        <div class="climate">{climate}</div>
-        <div class="description">{description}</div>
-        <div class="buttons">
-            <button>SEE MORE</button>
-            <button>ADQUIRIR</button>
-        </div>
-    </div>
+<img class="carrousel__image" src={src} alt={alt} />
+<div class="content">
+  <div class="place">{place}</div>
+  <div class="location">{location}</div>
+  <div class="climate">{climate}</div>
+  <div class="description">{description}</div>
+  <div class="buttons">
+    <button>SEE MORE</button>
+    <button>ADQUIRIR</button>
+  </div>
+</div>
