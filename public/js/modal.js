@@ -133,11 +133,11 @@ function getRecommendations() {
   }, {});
 
   const destinationType = normalizeString(answersMap['1'] || ''); // '1' es el id de la pregunta sobre el tipo de entorno
-  const climate = normalizeString(answersMap['3'] || ''); // '3' es el id de la pregunta sobre el clima
-  const activity = normalizeString(answersMap['5'] || ''); // '5' es el id de la pregunta sobre las actividades
-  const accommodation = normalizeString(answersMap['7'] || ''); // '7' es el id de la pregunta sobre el alojamiento
-  const duration = normalizeString(answersMap['9'] || ''); // '9' es el id de la pregunta sobre la duración
-  const age = normalizeString(answersMap['11'] || ''); // '11' es el id de la pregunta sobre la edad
+  const climate = normalizeString(answersMap['2'] || ''); // '3' es el id de la pregunta sobre el clima
+  const activity = normalizeString(answersMap['3'] || ''); // '5' es el id de la pregunta sobre las actividades
+  const accommodation = normalizeString(answersMap['4'] || ''); // '7' es el id de la pregunta sobre el alojamiento
+  const duration = normalizeString(answersMap['5'] || ''); // '9' es el id de la pregunta sobre la duración
+  const age = normalizeString(answersMap['6'] || ''); // '11' es el id de la pregunta sobre la edad
 
   // Buscar la combinación de respuestas y normalizar los datos JSON
   const result = destinationData.find(
@@ -155,10 +155,8 @@ function getRecommendations() {
     ? result.international
     : 'Dubái, Emiratos Árabes';
 
-  document.getElementById(
-    'national-destination',
-  ).textContent = `Destino Nacional: ${nationalDestination}`;
-  document.getElementById(
-    'international-destination',
-  ).textContent = `Destino Internacional: ${internationalDestination}`;
+  document.getElementById('national-destination').textContent =
+    `Destino Nacional: ${nationalDestination}`;
+  document.getElementById('international-destination').textContent =
+    `Destino Internacional: ${internationalDestination}`;
 }

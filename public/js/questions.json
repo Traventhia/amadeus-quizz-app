@@ -1,0 +1,62 @@
+[
+    {
+        "id": "1",
+        "category": "Preferencia de destino",
+        "question": "¿Qué tipo de entorno prefieres para tus vacaciones?",
+        "options": [
+            "Playa",
+            "Montaña",
+            "Ciudad"
+        ]
+    },
+    {
+        "id": "2",
+        "category": "Preferencia climática",
+        "question": "¿Qué clima prefieres durante tus vacaciones?",
+        "options": [
+            "Caluroso",
+            "Templado",
+            "Frío"
+        ]
+    },
+    {
+        "id": "3",
+        "category": "Preferencia de actividad",
+        "question": "¿Qué tipo de actividades prefieres hacer durante tus vacaciones?",
+        "options": [
+            "Deportes y aventuras",
+            "Cultura y museos",
+            "Relax y bienestar"
+        ]
+    },
+    {
+        "id": "4",
+        "category": "Preferencia de alojamiento",
+        "question": "¿Qué tipo de alojamiento prefieres?",
+        "options": [
+            "Hotel de lujo",
+            "Hostal o albergue",
+            "Airbnb o apartamento"
+        ]
+    },
+    {
+        "id": "5",
+        "category": "Duración del viaje",
+        "question": "¿Cuánto tiempo planeas quedarte de vacaciones?",
+        "options": [
+            "Menos de una semana",
+            "Una a dos semanas",
+            "Más de dos semanas"
+        ]
+    },
+    {
+        "id": "6",
+        "category": "Edad",
+        "question": "¿Cuál es tu rango de edad?",
+        "options": [
+            "Menos de 30 años",
+            "30-50 años",
+            "Más de 50 años"
+        ]
+    }
+]

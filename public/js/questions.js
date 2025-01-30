@@ -6,8 +6,8 @@
  * @example getQuestions('https://api.com/questions', (res) => { console.log(res) });
  */
 
-export async function getQuestions(url, callback) {
-  fetch(url)
+export async function getQuestions(callback) {
+  fetch('/js/questions.json')
     .then((response) => response.json())
     .then((res) => {
       callback(res);
